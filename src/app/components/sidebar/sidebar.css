@@ -5,7 +5,7 @@
 }
 
 #sidebar-container {
-    flex: 1;
+    flex: 0 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between; 
@@ -19,12 +19,6 @@
     overflow: visible;
     transition: width 0.5s ease-in-out;
 }
-
-#sidebar-container.collapsed {
-    width: 60px; 
-    padding: 0;
-}
-
 
 .arrow-button {
     position: absolute;
