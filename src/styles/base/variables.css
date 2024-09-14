@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 :root {
+    --primary-red: #ea1d2c;
     --primary-red-gradient: linear-gradient(174deg, #ea1d2c 0.11%, #cf0c1a 99.89%);
     --primary-yellow-gradient: linear-gradient(164deg, #ffbf44 0%, #f3ac23 97.77%);
     --primary-pink-gradient: linear-gradient(164deg, #fe8bc1 0%, #ef62a4 97.78%);
