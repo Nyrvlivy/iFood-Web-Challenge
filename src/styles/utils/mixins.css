@@ -1,0 +1,147 @@
+.main-title-1 {
+    color: var(--heading-color-dark);
+    font-family: "Roboto", sans-serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 0.5em;
+}
+
+.main-title-2 {
+    color: var(--heading-color-dark);
+    font-family: "Roboto", sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.main-subtitle-light-1 {
+    color: var(--subtitle-color-light);
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.main-subtitle-dark-1 {
+    color: var(--heading-color-dark);
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.plain-text {
+    color: var(--subtitle-color-light);
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.link-see-more {
+    color: var(--heading-color-dark);
+    font-family: "Roboto", sans-serif;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration-line: underline;
+}
+
+.text-value-in-reais {
+    color: var(--heading-color-dark);
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.text-main-value-base {
+    font-family: "Roboto", sans-serif;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.text-main-value {
+    color: var(--heading-color-dark);
+}
+
+.text-positive-main-value {
+    color: var(--primary-green-gradient);
+}
+
+.text-table-column {
+    color: var(--subtitle-color-light);
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.text-table-row-base {
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.text-table-row {
+    color: var(--heading-color-dark);
+}
+
+.text-positive-table-row {
+    color: var(--primary-green-gradient);
+}
+
+.text-scheduled-table-row {
+    color: var(--accent-light-blue);
+}
+
+.text-open-table-row {
+    color: var(--neutral-gray);
+}
+
+.button-red-export {
+    color: var(--white-100, #fff);
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.button-status-app {
+    color: var(--white-100, #fff);
+    font-family: "Roboto", sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.sidebar-item-text {
+    color: var(--white-100, #fff);
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.sidebar-icon {
+    color: var(--white-100, #fff);
+    width: var(--24, 24px);
+    height: var(--24, 24px);
+}

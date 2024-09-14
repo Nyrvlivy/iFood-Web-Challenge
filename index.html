@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="src/assets/icons/ifood-red-logo-mini.svg" />
+        <title>iFinances - Powered by iFood</title>
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+        <link rel="stylesheet" href="src/styles/base/reset.css" />
+        <link rel="stylesheet" href="src/styles/base/bootstrap.min.css" />
+        <link rel="stylesheet" href="src/styles/base/variables.css" />
+        <link rel="stylesheet" href="src/styles/utils/mixins.css" />
+        <link rel="stylesheet" href="src/app/components/sidebar/sidebar.css" />
+        <link rel="stylesheet" href="src/styles/main.css" />
+    </head>
+    <body>
+        <div id="main-container">
+            <div id="sidebar-container"></div>
+            <div id="app-content" class="container-fluid"></div>
+        </div>
+
+        <script src="src/scripts/libs/bootstrap.bundle.min.js"></script>
+        <script src="src/app/components/sidebar/sidebar.js"></script>
+        <script src="src/app/router/router.js"></script>
+        <script>
+            loadSidebar().then(() => {});
+        </script>
+    </body>
+</html>
