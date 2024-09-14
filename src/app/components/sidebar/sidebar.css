@@ -5,24 +5,72 @@
 }
 
 #sidebar-container {
-    flex: 0 0 auto;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
     width: 340px;
     max-width: 340px;
-    min-width: 280px;
+    min-width: 60px;
     height: 100vh;
     background: var(--primary-red-gradient);
     position: sticky;
     top: 0;
-    overflow: hidden;
+    overflow: visible;
     transition: width 0.5s ease-in-out;
-    display: flex;
-    flex-direction: column;
 }
 
-.nav-section {
-    padding: 20px 20px 0 20px;
-    flex: 1;
-    overflow-y: auto;
+#sidebar-container.collapsed {
+    width: 60px; 
+    padding: 0;
+}
+
+
+.arrow-button {
+    position: absolute;
+    top: 3%; 
+    transform: translateY(-50%); 
+    right: -15px; 
+    width: 29px; 
+    height: 29px; 
+    background-color: #ffffff; 
+    border-radius: 50%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+    cursor: pointer;
+    z-index: 200; 
+    border: 2px solid var(--primary-red); 
+    transition: transform 0.3s ease-in-out;
+}
+
+
+
+.arrow-button span {
+    font-size: 20px; 
+    color: var(--primary-red); 
+}
+
+.arrow-button:hover {
+    transform: scale(1.1) translateY(-50%); 
+}
+
+
+#sidebar-container.collapsed .arrow-close {
+    display: none;
+}
+
+#sidebar-container.collapsed .arrow-open {
+    display: flex;
+}
+
+#sidebar-container .arrow-open {
+    display: none;
+}
+
+#sidebar-container:not(.collapsed) .nav-section {
+    padding: 20px 20px 0 20px; 
 }
 
 #sidebar a {
@@ -138,11 +186,7 @@
     margin-right: 15px;
 }
 
-.footer-nav {
-    padding-bottom: 10px;
-    display: flex;
-    justify-content: center;
-}
+
 
 .footer-item {
     height: 40px;
@@ -157,8 +201,15 @@
 .footer-item-text {
     font-size: 16px;
 }
+.footer-nav {
+    margin-top: auto; 
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
 
 .profile-section {
+    margin-top: 0; 
     background: #fff;
     height: 90px;
     transition: height 0.3s ease-in-out;
@@ -169,7 +220,6 @@
     padding: 15px 20px 20px 20px;
     overflow: hidden;
 }
-
 .profile-section.expanded {
     height: auto;
 }
@@ -280,5 +330,50 @@
 
     .status-toggle .button-status-app {
         font-size: 20px;
+    }
+}
+
+@media (max-width: 1200px) {
+    #sidebar-container {
+        width: 250px; /* Ajuste a largura para telas menores */
+    }
+
+    #sidebar-container.collapsed {
+        width: 60px; /* Largura colapsada */
+    }
+
+    #sidebar-logo-container img {
+        max-height: 40px; /* Reduzir o tamanho do logotipo */
+    }
+
+    .sidebar-item {
+        padding: 5px 10px; /* Reduzir o padding dos itens */
+    }
+
+    .arrow-button {
+        right: -10px; /* Ajustar a posição do botão */
+    }
+}
+
+@media (max-width: 768px) {
+    #sidebar-container {
+        width: 200px; /* Largura ainda menor para dispositivos móveis */
+    }
+
+    #sidebar-container.collapsed {
+        width: 50px; /* Largura colapsada para mobile */
+    }
+
+    .sidebar-item {
+        font-size: 14px; /* Reduzir o tamanho da fonte */
+    }
+
+    .arrow-button {
+        width: 25px; /* Ajustar o tamanho do botão */
+        height: 25px; /* Ajustar o tamanho do botão */
+    }
+
+    .arrow-button span {
+        font-size: 16px; /* Ajustar o tamanho da seta */
     }
 }
