@@ -435,3 +435,24 @@
     display: flex;
     justify-content: center;
 }
+
+@media (max-width: 500px) {
+    .sidebar-overlay {
+        min-width: 100%;
+        max-width: 100%;
+    }
+
+    .sidebar-overlay.sidebar-visible {
+        border-radius: 0px;
+    }
+}
+
+@media (max-width: 300px) {
+    .sidebar-overlay {
+        min-width: 300px;
+    }
+
+    .sidebar-overlay.sidebar-visible {
+        border-radius: 0px;
+    }
+}
