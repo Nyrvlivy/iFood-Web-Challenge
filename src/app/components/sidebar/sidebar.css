@@ -62,7 +62,7 @@
 }
 
 .sidebar-overlay:not(.collapsed) .nav-section {
-    padding: 20px 20px 0 20px;
+    padding: 15px 20px 0 20px;
 }
 
 #sidebar a {
@@ -143,7 +143,7 @@
 }
 
 .sidebar-item {
-    height: 50px;
+    height: 45px;
     display: flex;
     align-items: center;
     padding: 7px 20px;
@@ -400,13 +400,19 @@
 }
 
 .sidebar-overlay.collapsed .sidebar-item {
+    width: 40px;
+    height: 40px;
     padding: 7px 0;
     justify-content: center;
+    margin-bottom: 3px;
 }
 
 .sidebar-overlay.collapsed .status-toggle {
+    width: 40px;
+    height: 40px;
     padding: 14px 0;
     justify-content: center;
+    margin-bottom: 15px;
 }
 
 .sidebar-overlay.collapsed .profile-user {
@@ -415,4 +421,9 @@
 
 .sidebar-overlay.collapsed .profile-avatar {
     margin-right: 0;
+}
+
+.sidebar-overlay.collapsed .nav-section {
+    display: flex;
+    justify-content: center;
 }
