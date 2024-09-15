@@ -1,0 +1,452 @@
+[
+    {
+        "id": 50393,
+        "descricao": "Molestiae Dicta",
+        "popularidade": "13%",
+        "vendas": "3%",
+        "problemas": 188,
+        "motivo_mais_recorrente": "Pedido errado",
+        "valor": "R$218,00"
+    },
+    {
+        "id": 73502,
+        "descricao": "Exercitationem Iure",
+        "popularidade": "11%",
+        "vendas": "3%",
+        "problemas": 149,
+        "motivo_mais_recorrente": "Pedido incompleto",
+        "valor": "R$6587,00"
+    },
+    {
+        "id": 56320,
+        "descricao": "Iste Et",
+        "popularidade": "12%",
+        "vendas": "2%",
+        "problemas": 106,
+        "motivo_mais_recorrente": "Pedido errado",
+        "valor": "R$3046,00"
+    },
+    {
+        "id": 77705,
+        "descricao": "Voluptate Nisi",
+        "popularidade": "19%",
+        "vendas": "2%",
+        "problemas": 11,
+        "motivo_mais_recorrente": "Pedido errado",
+        "valor": "R$6666,00"
+    },
+    {
+        "id": 36043,
+        "descricao": "Culpa Accusantium",
+        "popularidade": "8%",
+        "vendas": "1%",
+        "problemas": 51,
+        "motivo_mais_recorrente": "Pedido errado",
+        "valor": "R$3051,00"
+    },
+    {
+        "id": 32177,
+        "descricao": "Repellat A",
+        "popularidade": "16%",
+        "vendas": "3%",
+        "problemas": 161,
+        "motivo_mais_recorrente": "Pedido incompleto",
+        "valor": "R$3330,00"
+    },
+    {
+        "id": 54928,
+        "descricao": "Quam Placeat",
+        "popularidade": "10%",
+        "vendas": "3%",
+        "problemas": 9,
+        "motivo_mais_recorrente": "Pedido não entregue",
+        "valor": "R$2497,00"
+    },
+    {
+        "id": 86296,
+        "descricao": "Culpa Blanditiis",
+        "popularidade": "9%",
+        "vendas": "0%",
+        "problemas": 108,
+        "motivo_mais_recorrente": "Pedido não entregue",
+        "valor": "R$6057,00"
+    },
+    {
+        "id": 16310,
+        "descricao": "Alias Cumque",
+        "popularidade": "16%",
+        "vendas": "3%",
+        "problemas": 107,
+        "motivo_mais_recorrente": "Pedido incompleto",
+        "valor": "R$132,00"
+    },
+    {
+        "id": 81870,
+        "descricao": "Quasi Ducimus",
+        "popularidade": "19%",
+        "vendas": "0%",
+        "problemas": 194,
+        "motivo_mais_recorrente": "Pedido incompleto",
+        "valor": "R$4995,00"
+    },
+    {
+        "id": 32171,
+        "descricao": "Dolores Illum",
+        "popularidade": "5%",
+        "vendas": "1%",
+        "problemas": 36,
+        "motivo_mais_recorrente": "Pedido incompleto",
+        "valor": "R$7220,00"
+    },
+    {
+        "id": 8528,
+        "descricao": "Saepe Excepturi",
+        "popularidade": "5%",
+        "vendas": "1%",
+        "problemas": 107,
+        "motivo_mais_recorrente": "Pedido não entregue",
+        "valor": "R$6540,00"
+    },
+    {
+        "id": 63019,
+        "descricao": "Sunt Ex",
+        "popularidade": "3%",
+        "vendas": "2%",
+        "problemas": 25,
+        "motivo_mais_recorrente": "Pedido incompleto",
+        "valor": "R$1182,00"
+    },
+    {
+        "id": 13469,
+        "descricao": "Dicta Adipisci",
+        "popularidade": "20%",
+        "vendas": "3%",
+        "problemas": 103,
+        "motivo_mais_recorrente": "Pedido não entregue",
+        "valor": "R$219,00"
+    },
+    {
+        "id": 52782,
+        "descricao": "Ipsam Eligendi",
+        "popularidade": "0%",
+        "vendas": "1%",
+        "problemas": 119,
+        "motivo_mais_recorrente": "Pedido errado",
+        "valor": "R$8532,00"
+    },
+    {
+        "id": 29407,
+        "descricao": "In Incidunt",
+        "popularidade": "1%",
+        "vendas": "3%",
+        "problemas": 11,
+        "motivo_mais_recorrente": "Pedido errado",
+        "valor": "R$7678,00"
+    },
+    {
+        "id": 90555,
+        "descricao": "Adipisci Accusamus",
+        "popularidade": "11%",
+        "vendas": "4%",
+        "problemas": 154,
+        "motivo_mais_recorrente": "Pedido não entregue",
+        "valor": "R$8841,00"
+    },
+    {
+        "id": 87262,
+        "descricao": "Vel Accusantium",
+        "popularidade": "1%",
+        "vendas": "2%",
+        "problemas": 104,
+        "motivo_mais_recorrente": "Pedido incompleto",
+        "valor": "R$3850,00"
+    },
+    {
+        "id": 99018,
+        "descricao": "Eum Praesentium",
+        "popularidade": "5%",
+        "vendas": "3%",
+        "problemas": 144,
+        "motivo_mais_recorrente": "Pedido errado",
+        "valor": "R$6017,00"
+    },
+    {
+        "id": 81624,
+        "descricao": "Magnam Quidem",
+        "popularidade": "12%",
+        "vendas": "5%",
+        "problemas": 54,
+        "motivo_mais_recorrente": "Pedido não entregue",
+        "valor": "R$6030,00"
+    },
+    {
+        "id": 63665,
+        "descricao": "Rerum Culpa",
+        "popularidade": "7%",
+        "vendas": "0%",
+        "problemas": 81,
+        "motivo_mais_recorrente": "Pedido errado",
+        "valor": "R$2985,00"
+    },
+    {
+        "id": 16441,
+        "descricao": "Illo Id",
+        "popularidade": "19%",
+        "vendas": "3%",
+        "problemas": 66,
+        "motivo_mais_recorrente": "Pedido não entregue",
+        "valor": "R$5015,00"
+    },
+    {
+        "id": 76904,
+        "descricao": "Iusto Quaerat",
+        "popularidade": "11%",
+        "vendas": "2%",
+        "problemas": 70,
+        "motivo_mais_recorrente": "Pedido errado",
+        "valor": "R$5452,00"
+    },
+    {
+        "id": 97615,
+        "descricao": "Quaerat Dolorem",
+        "popularidade": "7%",
+        "vendas": "0%",
+        "problemas": 148,
+        "motivo_mais_recorrente": "Pedido incompleto",
+        "valor": "R$3110,00"
+    },
+    {
+        "id": 52003,
+        "descricao": "Voluptatibus Laborum",
+        "popularidade": "19%",
+        "vendas": "4%",
+        "problemas": 41,
+        "motivo_mais_recorrente": "Pedido não entregue",
+        "valor": "R$3854,00"
+    },
+    {
+        "id": 17631,
+        "descricao": "Minima Consequuntur",
+        "popularidade": "4%",
+        "vendas": "1%",
+        "problemas": 82,
+        "motivo_mais_recorrente": "Pedido errado",
+        "valor": "R$4987,00"
+    },
+    {
+        "id": 62716,
+        "descricao": "Et Ea",
+        "popularidade": "7%",
+        "vendas": "1%",
+        "problemas": 198,
+        "motivo_mais_recorrente": "Pedido incompleto",
+        "valor": "R$1399,00"
+    },
+    {
+        "id": 94174,
+        "descricao": "Suscipit Eligendi",
+        "popularidade": "18%",
+        "vendas": "3%",
+        "problemas": 89,
+        "motivo_mais_recorrente": "Pedido errado",
+        "valor": "R$455,00"
+    },
+    {
+        "id": 4208,
+        "descricao": "A Id",
+        "popularidade": "6%",
+        "vendas": "1%",
+        "problemas": 100,
+        "motivo_mais_recorrente": "Pedido incompleto",
+        "valor": "R$2299,00"
+    },
+    {
+        "id": 6221,
+        "descricao": "Quibusdam Rerum",
+        "popularidade": "1%",
+        "vendas": "2%",
+        "problemas": 127,
+        "motivo_mais_recorrente": "Pedido não entregue",
+        "valor": "R$3229,00"
+    },
+    {
+        "id": 81642,
+        "descricao": "Veritatis Reiciendis",
+        "popularidade": "1%",
+        "vendas": "0%",
+        "problemas": 125,
+        "motivo_mais_recorrente": "Pedido errado",
+        "valor": "R$6051,00"
+    },
+    {
+        "id": 59360,
+        "descricao": "Assumenda Magnam",
+        "popularidade": "1%",
+        "vendas": "0%",
+        "problemas": 143,
+        "motivo_mais_recorrente": "Pedido não entregue",
+        "valor": "R$4113,00"
+    },
+    {
+        "id": 20796,
+        "descricao": "Officia Et",
+        "popularidade": "14%",
+        "vendas": "2%",
+        "problemas": 74,
+        "motivo_mais_recorrente": "Pedido incompleto",
+        "valor": "R$588,00"
+    },
+    {
+        "id": 6279,
+        "descricao": "Illum Expedita",
+        "popularidade": "12%",
+        "vendas": "0%",
+        "problemas": 187,
+        "motivo_mais_recorrente": "Pedido incompleto",
+        "valor": "R$3335,00"
+    },
+    {
+        "id": 89339,
+        "descricao": "Illum Quasi",
+        "popularidade": "15%",
+        "vendas": "1%",
+        "problemas": 15,
+        "motivo_mais_recorrente": "Pedido incompleto",
+        "valor": "R$1667,00"
+    },
+    {
+        "id": 66115,
+        "descricao": "Nobis Eveniet",
+        "popularidade": "5%",
+        "vendas": "0%",
+        "problemas": 192,
+        "motivo_mais_recorrente": "Pedido errado",
+        "valor": "R$3488,00"
+    },
+    {
+        "id": 96806,
+        "descricao": "Corporis Non",
+        "popularidade": "17%",
+        "vendas": "1%",
+        "problemas": 96,
+        "motivo_mais_recorrente": "Pedido não entregue",
+        "valor": "R$1113,00"
+    },
+    {
+        "id": 93503,
+        "descricao": "Inventore Perspiciatis",
+        "popularidade": "11%",
+        "vendas": "2%",
+        "problemas": 101,
+        "motivo_mais_recorrente": "Pedido incompleto",
+        "valor": "R$3062,00"
+    },
+    {
+        "id": 72390,
+        "descricao": "Minus Corporis",
+        "popularidade": "5%",
+        "vendas": "3%",
+        "problemas": 174,
+        "motivo_mais_recorrente": "Pedido incompleto",
+        "valor": "R$7213,00"
+    },
+    {
+        "id": 73457,
+        "descricao": "Nesciunt Ea",
+        "popularidade": "17%",
+        "vendas": "0%",
+        "problemas": 74,
+        "motivo_mais_recorrente": "Pedido não entregue",
+        "valor": "R$7370,00"
+    },
+    {
+        "id": 77329,
+        "descricao": "Voluptates Porro",
+        "popularidade": "11%",
+        "vendas": "5%",
+        "problemas": 113,
+        "motivo_mais_recorrente": "Pedido não entregue",
+        "valor": "R$7418,00"
+    },
+    {
+        "id": 95830,
+        "descricao": "Illum Eaque",
+        "popularidade": "17%",
+        "vendas": "2%",
+        "problemas": 115,
+        "motivo_mais_recorrente": "Pedido incompleto",
+        "valor": "R$506,00"
+    },
+    {
+        "id": 78615,
+        "descricao": "Quia Quam",
+        "popularidade": "20%",
+        "vendas": "3%",
+        "problemas": 158,
+        "motivo_mais_recorrente": "Pedido errado",
+        "valor": "R$2544,00"
+    },
+    {
+        "id": 73380,
+        "descricao": "Tempora Doloremque",
+        "popularidade": "6%",
+        "vendas": "0%",
+        "problemas": 145,
+        "motivo_mais_recorrente": "Pedido errado",
+        "valor": "R$106,00"
+    },
+    {
+        "id": 22550,
+        "descricao": "Dolorem Eum",
+        "popularidade": "13%",
+        "vendas": "0%",
+        "problemas": 125,
+        "motivo_mais_recorrente": "Pedido não entregue",
+        "valor": "R$2037,00"
+    },
+    {
+        "id": 78808,
+        "descricao": "Deserunt Nemo",
+        "popularidade": "16%",
+        "vendas": "3%",
+        "problemas": 97,
+        "motivo_mais_recorrente": "Pedido incompleto",
+        "valor": "R$8590,00"
+    },
+    {
+        "id": 80345,
+        "descricao": "Cum Voluptatibus",
+        "popularidade": "3%",
+        "vendas": "1%",
+        "problemas": 97,
+        "motivo_mais_recorrente": "Pedido incompleto",
+        "valor": "R$7052,00"
+    },
+    {
+        "id": 90989,
+        "descricao": "Assumenda Asperiores",
+        "popularidade": "11%",
+        "vendas": "1%",
+        "problemas": 148,
+        "motivo_mais_recorrente": "Pedido não entregue",
+        "valor": "R$1367,00"
+    },
+    {
+        "id": 79610,
+        "descricao": "Dolorem Ex",
+        "popularidade": "1%",
+        "vendas": "1%",
+        "problemas": 66,
+        "motivo_mais_recorrente": "Pedido errado",
+        "valor": "R$9223,00"
+    },
+    {
+        "id": 99059,
+        "descricao": "Animi Nobis",
+        "popularidade": "13%",
+        "vendas": "5%",
+        "problemas": 198,
+        "motivo_mais_recorrente": "Pedido errado",
+        "valor": "R$6883,00"
+    }
+]
