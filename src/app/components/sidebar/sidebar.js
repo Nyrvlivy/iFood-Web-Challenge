@@ -57,15 +57,18 @@ function attachSidebarEvents() {
     }
 
     const profileSection = document.getElementById("profile-section");
+    const sidebarOverlay = document.querySelector(".sidebar-overlay");
+
     if (profileSection) {
         profileSection.addEventListener("click", function () {
-            this.classList.toggle("expanded");
+            if (!sidebarOverlay.classList.contains("collapsed")) {
+                this.classList.toggle("expanded");
+            }
         });
     }
 
     const arrowClose = document.querySelector(".arrow-button.arrow-close");
     const arrowOpen = document.querySelector(".arrow-button.arrow-open");
-    const sidebarOverlay = document.querySelector(".sidebar-overlay");
     const logoImg = document.querySelector("#sidebar-logo-container img");
 
     if (arrowClose) {
