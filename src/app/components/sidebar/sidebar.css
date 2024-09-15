@@ -19,6 +19,7 @@
     top: 0;
     overflow: visible;
     transition: width 0.5s ease-in-out;
+    border-radius: 0;
 }
 
 .arrow-button {
@@ -353,6 +354,7 @@
 
     .sidebar-overlay.sidebar-visible {
         transform: translateX(0);
+        border-radius: 0px var(--80, 80px) 0px 0px;
     }
 
     .sidebar-overlay.collapsed {
