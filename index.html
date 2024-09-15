@@ -11,19 +11,26 @@
         <link rel="stylesheet" href="src/styles/base/variables.css" />
         <link rel="stylesheet" href="src/styles/utils/mixins.css" />
         <link rel="stylesheet" href="src/app/components/sidebar/sidebar.css" />
+        <link rel="stylesheet" href="src/app/components/navbar/navbar.css" />
         <link rel="stylesheet" href="src/styles/main.css" />
     </head>
     <body>
-        <div id="main-container">
+        <div id="navbar-container"></div>
+        <div id="content-wrapper">
             <div id="sidebar-container"></div>
-            <div id="app-content" class="container-fluid"></div>
+            <div id="main-container">
+                <div id="app-content" class="container-fluid"></div>
+            </div>
         </div>
 
         <script src="src/scripts/libs/bootstrap.bundle.min.js"></script>
         <script src="src/app/components/sidebar/sidebar.js"></script>
+        <script src="src/app/components/navbar/navbar.js"></script>
         <script src="src/app/router/router.js"></script>
         <script>
-            loadSidebar().then(() => {});
+            loadSidebar().then(() => {
+                loadNavbar();
+            });
         </script>
     </body>
 </html>

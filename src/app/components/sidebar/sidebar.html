@@ -1,135 +1,129 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sidebar Expandida</title>
-    <!-- Import do CSS -->
-    <link rel="stylesheet" href="/src/app/components/sidebar/sidebar.css">
-</head>
-<body>
-
-<div id="sidebar-container">
-    <div id="sidebar" class="sidebar text-white">
-        <!-- Botão para colapsar -->
-        <div class="arrow-button arrow-close">
-            <span>←</span> <!-- Ícone da seta para colapsar -->
-        </div>
-
-        <!-- Logotipo e status -->
-        <div id="sidebar-logo-container">
-            <img src="/src/assets/icons/ifinances-logo-menu.svg" alt="iFood Logo" />
-        </div>
-
-        <div id="status-container" class="d-flex align-items-center justify-content-center status-toggle">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <circle cx="7.82747" cy="8.00008" r="7.37288" fill="#85f17c" />
-            </svg>
-            <span class="button-status-app ms-2">Aberto</span>
-        </div>
-
-        <!-- Seção de navegação -->
-        <div class="nav-section">
-            <ul class="nav nav-pills flex-column mb-auto">
-                <li class="nav-item">
-                    <a href="#/dashboard" class="d-flex align-items-center sidebar-item text-white text-decoration-none" data-tooltip="Painel de Controle">
-                        <span class="material-symbols-outlined sidebar-icon">dashboard</span>
-                        <span class="sidebar-item-text">Dashboard</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#/settlements" class="d-flex align-items-center sidebar-item text-white text-decoration-none" data-tooltip="Gerencie seus repasses">
-                        <span class="material-symbols-outlined sidebar-icon">receipt</span>
-                        <span class="sidebar-item-text">Repasses</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#/entries" class="d-flex align-items-center sidebar-item text-white text-decoration-none" data-tooltip="Registre lançamentos financeiros">
-                        <span class="material-symbols-outlined sidebar-icon">payments</span>
-                        <span class="sidebar-item-text">Lançamentos</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#/performance" class="d-flex align-items-center sidebar-item text-white text-decoration-none" data-tooltip="Acompanhe o desempenho">
-                        <span class="material-symbols-outlined sidebar-icon">monitoring</span>
-                        <span class="sidebar-item-text">Desempenho</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#/operation-health" class="d-flex align-items-center sidebar-item text-white text-decoration-none" data-tooltip="Verifique a saúde operacional">
-                        <span class="material-symbols-outlined sidebar-icon">psychiatry</span>
-                        <span class="sidebar-item-text">Saúde Operacional</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#/goals-and-projections" class="d-flex align-items-center sidebar-item text-white text-decoration-none" data-tooltip="Defina metas e projeções">
-                        <span class="material-symbols-outlined sidebar-icon">target</span>
-                        <span class="sidebar-item-text">Metas e Projeções</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="d-flex align-items-center sidebar-item text-white text-decoration-none" data-bs-toggle="modal" data-bs-target="#notifications-modal" data-tooltip="Veja as notificações">
-                        <span class="material-symbols-outlined sidebar-icon">notifications_active</span>
-                        <span class="sidebar-item-text">Notificações</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-
-        <!-- Footer -->
-        <div class="footer-nav">
-            <a href="#" class="d-flex align-items-center sidebar-item footer-item text-white text-decoration-none" data-bs-toggle="modal" data-bs-target="#help-modal" data-tooltip="Acessar ajuda e suporte">
-                <span class="material-symbols-outlined sidebar-icon footer-icon">help</span>
-                <span class="sidebar-item-text footer-item-text">Chamados e Ajuda</span>
-            </a>
-        </div>
-
-        <!-- Seção de perfil -->
-        <div id="profile-section" class="profile-section">
-            <div class="profile-divider"></div>
-            <div class="profile-items">
-                <div class="profile-item">
-                    <span class="material-symbols-outlined profile-icon">person</span>
-                    <span class="profile-item-text">Contas</span>
-                    <span class="material-symbols-outlined profile-arrow">keyboard_arrow_right</span>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sidebar Expandida</title>
+        <link rel="stylesheet" href="/src/app/components/sidebar/sidebar.css" />
+    </head>
+    <body>
+        <div class="sidebar-overlay">
+            <div id="sidebar" class="sidebar text-white">
+                <div class="arrow-button arrow-close">
+                    <span class="material-symbols-outlined">chevron_left</span>
                 </div>
-                <div class="profile-item">
-                    <span class="material-symbols-outlined profile-icon">manage_accounts</span>
-                    <span class="profile-item-text">Permissões</span>
-                    <span class="material-symbols-outlined profile-arrow">keyboard_arrow_right</span>
+
+                <div class="sidebar-header">
+                    <div id="sidebar-logo-container">
+                        <img src="/src/assets/icons/ifinances-logo-menu.svg" alt="iFood Logo" />
+                    </div>
+
+                    <div id="status-container" class="d-flex align-items-center justify-content-center status-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <circle cx="7.82747" cy="8.00008" r="7.37288" fill="#85f17c" />
+                        </svg>
+                        <span class="button-status-app ms-2">Aberto</span>
+                    </div>
                 </div>
-                <div class="profile-item">
-                    <span class="material-symbols-outlined profile-icon">notifications</span>
-                    <span class="profile-item-text">Notificações</span>
-                    <span class="material-symbols-outlined profile-arrow">keyboard_arrow_right</span>
+
+                <div class="nav-section">
+                    <ul class="nav nav-pills flex-column mb-auto">
+                        <li class="nav-item">
+                            <a href="#/dashboard" class="d-flex align-items-center sidebar-item text-white text-decoration-none" data-tooltip="Painel de Controle">
+                                <span class="material-symbols-outlined sidebar-icon">dashboard</span>
+                                <span class="sidebar-item-text">Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#/settlements" class="d-flex align-items-center sidebar-item text-white text-decoration-none" data-tooltip="Gerencie seus repasses">
+                                <span class="material-symbols-outlined sidebar-icon">receipt</span>
+                                <span class="sidebar-item-text">Repasses</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#/entries" class="d-flex align-items-center sidebar-item text-white text-decoration-none" data-tooltip="Registre lançamentos financeiros">
+                                <span class="material-symbols-outlined sidebar-icon">payments</span>
+                                <span class="sidebar-item-text">Lançamentos</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#/performance" class="d-flex align-items-center sidebar-item text-white text-decoration-none" data-tooltip="Acompanhe o desempenho">
+                                <span class="material-symbols-outlined sidebar-icon">monitoring</span>
+                                <span class="sidebar-item-text">Desempenho</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#/operation-health" class="d-flex align-items-center sidebar-item text-white text-decoration-none" data-tooltip="Verifique a saúde operacional">
+                                <span class="material-symbols-outlined sidebar-icon">psychiatry</span>
+                                <span class="sidebar-item-text">Saúde Operacional</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#/goals-and-projections" class="d-flex align-items-center sidebar-item text-white text-decoration-none" data-tooltip="Defina metas e projeções">
+                                <span class="material-symbols-outlined sidebar-icon">target</span>
+                                <span class="sidebar-item-text">Metas e Projeções</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="d-flex align-items-center sidebar-item text-white text-decoration-none" data-bs-toggle="modal" data-bs-target="#notifications-modal" data-tooltip="Veja as notificações">
+                                <span class="material-symbols-outlined sidebar-icon">notifications_active</span>
+                                <span class="sidebar-item-text">Notificações</span>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-                <div class="profile-item">
-                    <span class="material-symbols-outlined profile-icon">info</span>
-                    <span class="profile-item-text">Sobre</span>
-                    <span class="material-symbols-outlined profile-arrow">keyboard_arrow_right</span>
+
+                <div class="footer-nav">
+                    <a href="#" class="d-flex align-items-center sidebar-item footer-item text-white text-decoration-none" data-bs-toggle="modal" data-bs-target="#help-modal" data-tooltip="Acessar ajuda e suporte">
+                        <span class="material-symbols-outlined sidebar-icon footer-icon">help</span>
+                        <span class="sidebar-item-text footer-item-text">Chamados e Ajuda</span>
+                    </a>
+                </div>
+
+                <div id="profile-section" class="profile-section">
+                    <div class="profile-divider"></div>
+                    <div class="profile-items">
+                        <div class="profile-item">
+                            <span class="material-symbols-outlined profile-icon">person</span>
+                            <span class="profile-item-text">Contas</span>
+                            <span class="material-symbols-outlined profile-arrow">keyboard_arrow_right</span>
+                        </div>
+                        <div class="profile-item">
+                            <span class="material-symbols-outlined profile-icon">manage_accounts</span>
+                            <span class="profile-item-text">Permissões</span>
+                            <span class="material-symbols-outlined profile-arrow">keyboard_arrow_right</span>
+                        </div>
+                        <div class="profile-item">
+                            <span class="material-symbols-outlined profile-icon">notifications</span>
+                            <span class="profile-item-text">Notificações</span>
+                            <span class="material-symbols-outlined profile-arrow">keyboard_arrow_right</span>
+                        </div>
+                        <div class="profile-item">
+                            <span class="material-symbols-outlined profile-icon">info</span>
+                            <span class="profile-item-text">Sobre</span>
+                            <span class="material-symbols-outlined profile-arrow">keyboard_arrow_right</span>
+                        </div>
+                    </div>
+                    <div class="profile-user">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#user-modal" class="profile-link">
+                            <img src="src/assets/images/avatar-menu.svg" alt="Avatar" class="profile-avatar" />
+                        </a>
+                        <div class="profile-info">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#user-modal" class="profile-link">
+                                <h4 class="profile-title">St. Ellie's Pub</h4>
+                                <span class="profile-subtitle">John - Administrador</span>
+                            </a>
+                        </div>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#user-modal" class="profile-link">
+                            <span class="material-symbols-outlined profile-arrow" style="color: #555555">sync_alt</span>
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="profile-user">
-                <a href="#" data-bs-toggle="modal" data-bs-target="#user-modal" class="profile-link">
-                    <img src="src/assets/images/avatar-menu.svg" alt="Avatar" class="profile-avatar" />
-                </a>
-                <div class="profile-info">
-                    <a href="#" data-bs-toggle="modal" data-bs-target="#user-modal" class="profile-link">
-                        <h4 class="profile-title">St. Ellie's Pub</h4>
-                        <span class="profile-subtitle">John - Administrador</span>
-                    </a>
-                </div>
-                <a href="#" data-bs-toggle="modal" data-bs-target="#user-modal" class="profile-link">
-                    <span class="material-symbols-outlined profile-arrow" style="color: #555555">sync_alt</span>
-                </a>
+
+            <div class="arrow-button arrow-open">
+                <span class="material-symbols-outlined">chevron_right</span>
             </div>
         </div>
-    </div>
-
-    <!-- Botão para expandir (colapsada) -->
-    <div class="arrow-button arrow-open">
-        <span>→</span> <!-- Ícone da seta para expandir -->
-    </div>
-</div>
-</body>
+    </body>
 </html>

@@ -1,24 +1,3 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const sidebarContainer = document.getElementById("sidebar-container");
-
-    const arrowClose = document.querySelector(".arrow-close");
-    const arrowOpen = document.querySelector(".arrow-open");
-
-    if (arrowClose) {
-        arrowClose.addEventListener("click", function () {
-            sidebarContainer.classList.add("collapsed");
-        });
-    }
-
-    if (arrowOpen) {
-        arrowOpen.addEventListener("click", function () {
-            sidebarContainer.classList.remove("collapsed");
-        });
-    }
-
-    loadSidebar();
-});
-
 async function loadSidebar() {
     const sidebarContainer = document.getElementById("sidebar-container");
 
@@ -33,12 +12,6 @@ async function loadSidebar() {
     } catch (error) {
         console.error("Error loading sidebar:", error);
     }
-        document.addEventListener("click", function(event) {
-        const sidebar = document.getElementById("sidebar-container");
-        if (!sidebar.contains(event.target) && !document.getElementById("arrow-close").contains(event.target)) {
-            sidebar.classList.add("closed"); // Adicione uma classe para esconder a sidebar
-        }
-    });
 }
 
 async function loadModals() {
@@ -64,23 +37,9 @@ async function loadModal(modalName) {
     }
 }
 
-async function loadCollapsedSidebar() {
-    const sidebarContainer = document.getElementById("sidebar-container");
-
-    try {
-        const response = await fetch("src/app/components/sidebar/sidebar_collapsed.html");
-        const html = await response.text();
-        sidebarContainer.innerHTML = html;
-
-        attachCollapsedSidebarEvents(); 
-    } catch (error) {
-        console.error("Error loading collapsed sidebar:", error);
-    }
-}
-
 function attachSidebarEvents() {
     const statusToggle = document.querySelector(".status-toggle");
-    const arrowClose = document.querySelector(".arrow-close");
+
     if (statusToggle) {
         statusToggle.addEventListener("click", function () {
             this.classList.toggle("closed");
@@ -97,30 +56,26 @@ function attachSidebarEvents() {
         });
     }
 
-    if (arrowClose) {
-        arrowClose.addEventListener("click", function () {
-            const sidebarContainer = document.getElementById("sidebar-container");
-            sidebarContainer.classList.add("collapsed");
-            loadCollapsedSidebar(); 
-        });
-    }
     const profileSection = document.getElementById("profile-section");
     if (profileSection) {
         profileSection.addEventListener("click", function () {
             this.classList.toggle("expanded");
         });
     }
-}
 
-function attachCollapsedSidebarEvents() {
-    
-    const arrowOpen = document.querySelector(".arrow-open");
+    const arrowClose = document.querySelector(".arrow-button.arrow-close");
+    const arrowOpen = document.querySelector(".arrow-button.arrow-open");
+    const sidebarOverlay = document.querySelector(".sidebar-overlay");
+
+    if (arrowClose) {
+        arrowClose.addEventListener("click", function () {
+            sidebarOverlay.classList.add("collapsed");
+        });
+    }
 
     if (arrowOpen) {
         arrowOpen.addEventListener("click", function () {
-            const sidebarContainer = document.getElementById("sidebar-container");
-            sidebarContainer.classList.remove("collapsed");
-            loadSidebar(); 
+            sidebarOverlay.classList.remove("collapsed");
         });
     }
 }
@@ -136,4 +91,3 @@ function highlightActiveLink() {
         }
     });
 }
-loadSidebar();
