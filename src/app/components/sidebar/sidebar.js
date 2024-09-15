@@ -14,27 +14,27 @@ async function loadSidebar() {
     }
 }
 
-async function loadModals() {
-    await loadModal("notifications-modal");
-    await loadModal("help-modal");
-}
+function showNotification(message, type, emoji) {
+    const notificationContainer = document.getElementById("notification-container");
 
-async function loadModal(modalName) {
-    const modalContainer = document.createElement("div");
-    document.body.appendChild(modalContainer);
+    const alertDiv = document.createElement("div");
+    alertDiv.className = `alert alert-${type} alert-dismissible fade show`;
+    alertDiv.role = "alert";
+    alertDiv.innerHTML = `
+        ${emoji} ${message}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    `;
 
-    try {
-        const modalHtmlResponse = await fetch(`src/app/components/modals/${modalName}/${modalName}.html`);
-        const modalHtml = await modalHtmlResponse.text();
-        modalContainer.innerHTML = modalHtml;
+    notificationContainer.appendChild(alertDiv);
 
-        const modalCssLink = document.createElement("link");
-        modalCssLink.rel = "stylesheet";
-        modalCssLink.href = `src/app/components/modals/${modalName}/${modalName}.css`;
-        document.head.appendChild(modalCssLink);
-    } catch (error) {
-        console.error(`Error loading ${modalName}:`, error);
-    }
+    setTimeout(() => {
+        alertDiv.classList.remove("show");
+        alertDiv.classList.add("hide");
+
+        setTimeout(() => {
+            alertDiv.remove();
+        }, 200);
+    }, 3000);
 }
 
 function attachSidebarEvents() {
@@ -49,9 +49,11 @@ function attachSidebarEvents() {
             if (this.classList.contains("closed")) {
                 statusText.textContent = "Fechado";
                 circle.setAttribute("fill", "var(--white-100, #fff)");
+                showNotification("Estabelecimento fechado", "danger", "❌");
             } else {
                 statusText.textContent = "Aberto";
                 circle.setAttribute("fill", "#85f17c");
+                showNotification("Estabelecimento aberto", "success", "✅");
             }
         });
     }
