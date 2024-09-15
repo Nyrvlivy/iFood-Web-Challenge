@@ -9,6 +9,7 @@
     z-index: 1000;
     display: flex;
     align-items: center;
+    box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.05);
 }
 
 .navbar-content {
@@ -52,6 +53,7 @@
 
 .navbar-toggle .material-symbols-outlined {
     font-size: 28px;
+    color: var(--primary-red);
 }
 
 .navbar-logo {
@@ -62,6 +64,7 @@
     font-size: 28px;
     margin-left: 20px;
     cursor: pointer;
+    color: var(--primary-red);
 }
 
 @media (min-width: 1200px) {

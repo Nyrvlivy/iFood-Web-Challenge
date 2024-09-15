@@ -66,17 +66,48 @@ function attachSidebarEvents() {
     const arrowClose = document.querySelector(".arrow-button.arrow-close");
     const arrowOpen = document.querySelector(".arrow-button.arrow-open");
     const sidebarOverlay = document.querySelector(".sidebar-overlay");
+    const logoImg = document.querySelector("#sidebar-logo-container img");
 
     if (arrowClose) {
         arrowClose.addEventListener("click", function () {
             sidebarOverlay.classList.add("collapsed");
+            if (logoImg) {
+                logoImg.src = "/src/assets/icons/ifood-white-logo-mini.svg";
+                logoImg.style.maxHeight = "40px";
+                logoImg.style.minHeight = "30px";
+            }
         });
     }
 
     if (arrowOpen) {
         arrowOpen.addEventListener("click", function () {
             sidebarOverlay.classList.remove("collapsed");
+            if (logoImg) {
+                logoImg.src = "/src/assets/icons/ifinances-logo-menu.svg";
+                logoImg.style.maxHeight = "";
+                logoImg.style.minHeight = "";
+            }
         });
+    }
+
+    window.addEventListener("resize", handleWindowResize);
+
+    handleWindowResize();
+}
+
+function handleWindowResize() {
+    const sidebarOverlay = document.querySelector(".sidebar-overlay");
+    const logoImg = document.querySelector("#sidebar-logo-container img");
+
+    if (window.innerWidth <= 1200) {
+        if (sidebarOverlay.classList.contains("collapsed")) {
+            sidebarOverlay.classList.remove("collapsed");
+            if (logoImg) {
+                logoImg.src = "/src/assets/icons/ifinances-logo-menu.svg";
+                logoImg.style.maxHeight = "";
+                logoImg.style.minHeight = "";
+            }
+        }
     }
 }
 

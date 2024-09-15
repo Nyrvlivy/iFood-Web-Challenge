@@ -20,6 +20,7 @@ function attachNavbarEvents() {
         navbarToggle.addEventListener("click", function (event) {
             event.stopPropagation();
             sidebarOverlay.classList.toggle("sidebar-visible");
+            sidebarOverlay.classList.toggle("sidebar-hidden");
 
             const icon = navbarToggle.querySelector(".material-symbols-outlined");
             if (sidebarOverlay.classList.contains("sidebar-visible")) {
@@ -35,6 +36,7 @@ function attachNavbarEvents() {
 
             if (sidebarOverlay.classList.contains("sidebar-visible") && !isClickInsideSidebar && !isClickOnNavbarToggle) {
                 sidebarOverlay.classList.remove("sidebar-visible");
+                sidebarOverlay.classList.add("sidebar-hidden");
                 navbarToggle.querySelector(".material-symbols-outlined").textContent = "menu";
             }
         });

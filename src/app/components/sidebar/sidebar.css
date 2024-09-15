@@ -189,6 +189,8 @@
 .footer-icon {
     font-size: 20px;
     margin-right: 10px;
+    display: flex;
+    align-items: center;
 }
 
 .footer-item-text {
@@ -337,7 +339,7 @@
         z-index: 1100;
         width: 40%;
         min-width: 280px;
-        max-width: none;
+        max-width: 340px;
         transform: translateX(-100%);
         transition: transform 0.3s ease-in-out;
         overflow-y: auto;
@@ -386,6 +388,11 @@
 
 .sidebar-overlay.collapsed #sidebar-logo-container {
     justify-content: center;
+}
+
+.sidebar-overlay.collapsed #sidebar-logo-container img {
+    max-height: 40px;
+    min-height: 30px;
 }
 
 .sidebar-overlay.collapsed .sidebar-icon {
