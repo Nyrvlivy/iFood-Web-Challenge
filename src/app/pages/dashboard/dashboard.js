@@ -1,71 +1,68 @@
 // dashboard.js
+
 function loadDashboard() {
-    const dashboardElement = document.getElementById('app-content');
-    dashboardElement.innerHTML = createDashboard();
+    // Carrega o conteúdo HTML do dashboard
+    fetch('src/app/pages/dashboard/dashboard.html')
+        .then(response => response.text())
+        .then(html => {
+            const dashboardElement = document.getElementById('app-content');
+            dashboardElement.innerHTML = html;
 
-    // Inicializar os gráficos após o conteúdo ser carregado
-    initializeCharts();
+            // Após carregar o HTML, carregar os dados dinâmicos
+            loadDashboardData();
+        })
+        .catch(error => {
+            console.error('Erro ao carregar o dashboard:', error);
+        });
 }
 
-function createDashboard() {
-    const cardData = [
-        { icon: 'bi-cart', title: 'Valor bruto das vendas', value: '80.903,51', color: '#FFA500' },
-        { icon: 'bi-currency-dollar', title: 'Valor recebido na loja', value: '13.502,31', color: '#FF69B4' },
-        { icon: 'bi-wallet2', title: 'Valor recebido via Zoop', value: '67.437,34', color: '#FF0000' },
-        { icon: 'bi-graph-up', title: 'Valor líquido', value: '54.213,46', color: '#32CD32' }
-    ];
+// dashboard.js
 
-    const payoutData = [
-        { status: 'Agendado', start_date: '30/06/2024', end_date: '06/07/2024', sales_value: '3.119,56', payout_value: '2.575,70' },
-        { status: 'Aprovado', start_date: '23/06/2024', end_date: '29/06/2024', sales_value: '2.681,92', payout_value: '2.214,59' },
-        { status: 'Em aberto', start_date: '09/06/2024', end_date: '22/06/2024', sales_value: '9.513,92', payout_value: '7.723,39' },
-        { status: 'Pago', start_date: '02/06/2024', end_date: '08/06/2024', sales_value: '2.321,83', payout_value: '2.536,43' },
-        { status: 'Pago', start_date: '19/05/2024', end_date: '02/06/2024', sales_value: '632,45', payout_value: '8.371,88' },
-        { status: 'Pago', start_date: '12/05/2024', end_date: '26/05/2024', sales_value: '8.648,70', payout_value: '6.597,24' }
-    ];
+function loadDashboardData() {
+    // Carregar os dados dos cards
+    fetch('src/data/card-data.json')
+        .then(response => response.json())
+        .then(cardData => {
+            console.log('Dados dos cards:', cardData);  // Log para verificar o conteúdo
+            const cardsHtml = cardData.map(card => createCardTile(card.icon, card.title, card.value, card.color)).join('');
+            const cardsContainer = document.getElementById('cards-container');
+            cardsContainer.innerHTML = cardsHtml;
+        })
+        .catch(error => {
+            console.error('Erro ao carregar os dados dos cards:', error);
+        });
 
-    // Gere os cards
-    const cardsHtml = cardData.map(card => createCardTile(card.icon, card.title, card.value, card.color)).join('');
+    // Carregar os dados da tabela de repasses
+    fetch('src/data/payout-data.json')
+        .then(response => response.json())
+        .then(payoutData => {
+            console.log('Dados da tabela de repasses:', payoutData);  // Log para verificar o conteúdo
 
-    // Gere a tabela de repasses
-    const payoutTableHtml = createPayoutTable(payoutData);
+            // Mapeamento dos dados para criar as linhas da tabela
+            let tableRows = payoutData.map(payout => `
+                <tr>
+                    <td><span class="status-icon status-${payout.status.toLowerCase().replace(' ', '-')}"></span>${payout.status}</td>
+                    <td>${payout.start_date}</td>
+                    <td>${payout.end_date}</td>
+                    <td>R$ ${payout.sales_value}</td>
+                    <td>R$ ${payout.payout_value}</td>
+                    <td><i class="bi bi-chevron-right"></i></td>
+                </tr>
+            `).join('');
 
-    // Retorne o HTML completo do dashboard
-    return `
-        <h2 class="mb-4">Dashboard</h2>
-        <div class="row">
-            ${cardsHtml}
-        </div>
-        <div class="row">
-            <div class="col-md-8">
-                <!-- Gráfico Overview -->
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Overview</h5>
-                        <canvas id="overviewChart"></canvas>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <!-- Gráfico Desempenho Diário -->
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Desempenho Diário</h5>
-                        <canvas id="dailyPerformanceChart"></canvas>
-                    </div>
-                </div>
-                <!-- Gráfico Progresso de Metas -->
-                <div class="card mt-4">
-                    <div class="card-body">
-                        <h5 class="card-title">Progresso de Metas</h5>
-                        <canvas id="goalsChart"></canvas>
-                    </div>
-                </div>
-            </div>
-        </div>
-        ${payoutTableHtml}
-    `;
+            // Chamar a função createPayoutTable passando as linhas da tabela
+            const payoutTableHtml = createPayoutTable(tableRows);
+            const payoutTableContainer = document.getElementById('payout-table-container');
+            payoutTableContainer.innerHTML = payoutTableHtml;
+
+            // Inicializar gráficos
+            // initializeCharts();
+        })
+        .catch(error => {
+            console.error('Erro ao carregar os dados de repasses:', error);
+        });
 }
+
 
 function initializeCharts() {
     if (typeof Chart === 'undefined') {

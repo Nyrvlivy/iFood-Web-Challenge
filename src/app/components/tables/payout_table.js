@@ -1,16 +1,6 @@
 // payout_table.js
-function createPayoutTable(payouts) {
-    let tableRows = payouts.map(payout => `
-        <tr>
-            <td><span class="status-icon status-${payout.status.toLowerCase().replace(' ', '-')}"></span>${payout.status}</td>
-            <td>${payout.start_date}</td>
-            <td>${payout.end_date}</td>
-            <td>R$ ${payout.sales_value}</td>
-            <td>R$ ${payout.payout_value}</td>
-            <td><i class="bi bi-chevron-right"></i></td>
-        </tr>
-    `).join('');
 
+function createPayoutTable(tableRows) {
     return `
         <div class="card mt-4">
             <div class="card-body">
