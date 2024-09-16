@@ -1,0 +1,17 @@
+/* payout_table.css */
+.table {
+    font-size: 0.9rem;
+}
+
+.status-icon {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.status-agendado { background-color: #ffc107; }
+.status-aprovado { background-color: #28a745; }
+.status-em-aberto { background-color: #17a2b8; }
+.status-pago { background-color: #28a745; }
