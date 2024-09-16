@@ -3,21 +3,21 @@
         "status": "Agendado",
         "start_date": "01/01/2024",
         "end_date": "08/01/2024",
-        "sales_value": "10,000",
-        "payout_value": "9,000"
+        "sales_value": 10000,
+        "payout_value": 9000
     },
     {
         "status": "Aprovado",
         "start_date": "09/01/2024",
         "end_date": "15/01/2024",
-        "sales_value": "12,000",
-        "payout_value": "10,800"
+        "sales_value": 12000,
+        "payout_value": 10800
     },
     {
         "status": "Pago",
         "start_date": "16/01/2024",
         "end_date": "22/01/2024",
-        "sales_value": "14,000",
-        "payout_value": "12,600"
+        "sales_value": 14000,
+        "payout_value": 12600
     }
 ]
