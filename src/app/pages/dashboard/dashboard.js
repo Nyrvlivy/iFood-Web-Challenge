@@ -11,10 +11,26 @@ function loadDashboard() {
             // Após carregar o HTML, carregar os dados dinâmicos
             loadCardData();
             loadPayoutData();
+            initializeCharts(); // Carregar os gráficos
+
+            // Adiciona listener para recarregar os dados quando voltar para a tela
+            window.addEventListener('focus', reloadDashboardData);
         })
         .catch(error => {
             console.error('Erro ao carregar o dashboard:', error);
         });
+}
+
+function reloadDashboardData() {
+    console.log('Recarregando dados do dashboard...');
+    loadCardData();
+    loadPayoutData();
+    initializeCharts(); // Recarregar gráficos também
+}
+
+function unloadDashboard() {
+    // Remover listener ao sair da tela
+    window.removeEventListener('focus', reloadDashboardData);
 }
 
 function loadCardData() {
@@ -90,4 +106,85 @@ function createPayoutTable(tableRows) {
             </div>
         </div>
     `;
+}
+
+function initializeCharts() {
+    if (typeof Chart === 'undefined') {
+        console.error('Chart.js não está carregado.');
+        return;
+    }
+
+    // Gráfico Overview
+    const overviewChartCtx = document.getElementById('overviewChart').getContext('2d');
+    new Chart(overviewChartCtx, {
+        type: 'line',
+        data: {
+            labels: ['09/06', '10/06', '11/06', '12/06', '13/06', '14/06', '15/06'],
+            datasets: [{
+                label: 'Vendas',
+                data: [12000, 19000, 15000, 17000, 22000, 24000, 25000],
+                borderColor: 'rgb(255, 99, 132)',
+                tension: 0.1,
+                fill: false
+            }, {
+                label: 'Repasses',
+                data: [10000, 15000, 13000, 14000, 20000, 22000, 23000],
+                borderColor: 'rgb(54, 162, 235)',
+                tension: 0.1,
+                fill: false
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                y: { beginAtZero: true }
+            }
+        }
+    });
+
+    // Gráfico Desempenho Diário
+    const dailyPerformanceChartCtx = document.getElementById('dailyPerformanceChart').getContext('2d');
+    new Chart(dailyPerformanceChartCtx, {
+        type: 'line',
+        data: {
+            labels: ['10:00', '12:00', '14:00', '16:00', '18:00'],
+            datasets: [{
+                label: 'Vendas',
+                data: [1200, 1900, 1500, 2200, 2500],
+                borderColor: 'rgb(255, 99, 132)',
+                tension: 0.1,
+                fill: false
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                y: { beginAtZero: true }
+            }
+        }
+    });
+
+    // Gráfico Progresso de Metas
+    const goalsChartCtx = document.getElementById('goalsChart').getContext('2d');
+    new Chart(goalsChartCtx, {
+        type: 'doughnut',
+        data: {
+            labels: ['Vendas', 'Repasses', 'Novos Clientes', 'Retenção'],
+            datasets: [{
+                data: [70, 85, 60, 90],
+                backgroundColor: [
+                    'rgb(255, 99, 132)',
+                    'rgb(54, 162, 235)',
+                    'rgb(255, 205, 86)',
+                    'rgb(75, 192, 192)'
+                ]
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: { position: 'bottom' }
+            }
+        }
+    });
 }
