@@ -1,0 +1,26 @@
+[
+    {
+        "icon": "bi-wallet",
+        "title": "Total Sales",
+        "value": "12,000",
+        "color": "#28a745"
+    },
+    {
+        "icon": "bi-cash-stack",
+        "title": "Total Payouts",
+        "value": "9,000",
+        "color": "#007bff"
+    },
+    {
+        "icon": "bi-cart",
+        "title": "Total Orders",
+        "value": "1,200",
+        "color": "#ffc107"
+    },
+    {
+        "icon": "bi-bar-chart",
+        "title": "Profit",
+        "value": "5,000",
+        "color": "#dc3545"
+    }
+]
