@@ -87,7 +87,6 @@ section {
 .button-container {
     display: flex;
     justify-content: space-between;
-    margin-top: 15px;
 }
 
 .cancel-button,
@@ -99,7 +98,7 @@ section {
     cursor: pointer;
     width: 48%;
     margin-top: 30px;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
     height: 45px;
     font-family: "Roboto", sans-serif;
     font-size: 22px;
@@ -118,9 +117,10 @@ section {
 
 /* Charts */
 .performance-chart-container {
-    height: 560px;
+    height: 530px;
     overflow: hidden;
     position: relative;
+    
 }
 
 .performance-chart-image {
@@ -150,6 +150,7 @@ section {
 
 .target-audience-container {
     height: 250px;
+    margin-bottom: 0px;
 }
 
 .section {
