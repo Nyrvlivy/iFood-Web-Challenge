@@ -1,10 +1,20 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
 /*GRID*/
 .container {
     display: grid;
     height: 100%;
     width: 100%;
     grid-template-columns: 6fr 2fr;
-    grid-template-rows: .25fr .25fr 4fr ;
+    grid-template-rows: 0.25fr 0.25fr 4fr;
+    overflow-y: auto;
 }
 
 /*GRID*/
@@ -20,7 +30,7 @@
 .header-2 {
     display: flex;
     align-items: center;
-    justify-content: end;
+    justify-content: center;
 }
 
 .main-title-1 {
@@ -42,12 +52,9 @@
 .calendar {
     height: 20px;
     width: 20px;
-
 }
 
 .calendar-icon {
-
-    
     font-size: 18px;
     margin-left: 5px;
 }
@@ -262,8 +269,6 @@
     justify-content: start;
     height: 15%;
     width: 100%;
-
-    margin-top: -60px;
 }
 
 .alert {
@@ -317,8 +322,6 @@
     justify-content: start;
     align-items: start;
 
-    
-
     img {
         max-height: 180px;
         min-height: 130px;
@@ -351,8 +354,6 @@
 .aside-content-ext {
     background: var(--bs-white);
 
-    
-
     padding: 20px;
 }
 
@@ -367,8 +368,6 @@
 }
 
 .table-striped {
-
-   
     th {
         font-size: 12px;
         font-weight: 600;
@@ -382,12 +381,7 @@
         text-align: start;
         text-wrap: nowrap;
     }
-
-
-   
 }
-
-
 
 /*GRID*/
 .footer {
@@ -400,64 +394,296 @@
     color: var(--subtitle-color-light);
 }
 
-
 @media (max-width: 1260px) {
+}
+
+@media (max-width: 1024px) {
+    .main-ext-enclousure {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
     .main-ext {
         display: flex;
         flex-direction: column;
         justify-content: center;
         height: 10%;
-        width: 50%;
-    
-        /*border: solid 1px;*/
+        width: 56%;
     }
-
 
     .main-graf-ext {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         height: 55%;
+        width: 60%;
         margin-top: 10px;
-    
-        /*border: solid 1px;*/
     }
 
+    .graph-1 {
+        width: 100%;
+    }
+
+    .graph-2 {
+        width: 100%;
+    }
+
+    .main-int-1 {
+        width: 90%;
+        height: 150%;
+        margin: 15px;
+    }
+
+    .main-int-2 {
+        width: 90%;
+        height: 150%;
+    }
 
     .alert-ext {
         display: flex;
         justify-content: start;
         height: 15%;
-        width: 70%;
-    
+        width: 100%;
+
         margin-top: 0px;
     }
-    
+
     .alert {
-        margin-top: 15px;
-    
-        width: 100%;
-        height: 70%;
-    
-        border-radius: 10px;
-        background-color: var(--bs-red);
-        padding: 0px;
-    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
         p {
-            color: #fff;
-            text-align: center;
-            font-size: 14px;
-            margin-top: 0px;
+            margin-bottom: 0px;
         }
     }
 
+    .goals-container-ext {
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-title-1 {
+        font-size: 20px;
+    }
+
+    .button-goal {
+        width: 100px;
+        height: 20px;
+        font-size: 12px;
+
+        img {
+            display: none;
+        } 
+    }
+
+    .button-export {
+        width: 100px;
+        height: 20px;
+        font-size: 12px;
+
+        img {
+            display: none;
+        } 
+    }
+
+    .container {
+        display: grid;
+        height: 100%;
+        width: 100%;
+        grid-template-columns: 6fr;
+        grid-template-rows: 0.25fr 0.25fr 6.5fr 4fr;
+    }
+
+    .header {
+        grid-column: 1/1;
+        grid-row: 1/2;
+    }
+
+    .sub-header {
+        grid-column: 1/1;
+        grid-row: 2/3;
+    }
+
+    .main {
+        grid-column: 1/1;
+        grid-row: 3/4;
+    }
+
+    .aside {
+        grid-column: 1/1;
+        grid-row: 4/5;
+    }
 
     .goals-container-ext {
         display: flex;
-        flex-direction: column;
+        justify-content: space-around;
     }
 
+    .goals-image {
+        img {
+            height: 10vh;
+            width: 18vw;
+        }
+    }
 
+    .main-ext-enclousure {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
+    .graph-1 {
+        width: 90%;
+    }
+
+    .graph-2 {
+        width: 90%;
+    }
 }
+
+@media (max-width: 425px) {
+
+    
+    .main-title-1 {
+        font-size: 16px;
+    }
+
+    .sub-header {
+        h4 {
+            font-size: 12px;
+            color: var(--bs-red);
+            margin-left: 10px;
+        }
+
+        h3 {
+            font-size: 12px;
+            color: var(--subtitle-color-light);
+        }
+    }
+
+    .calendar-range {
+        font-size: 5px;
+        color: var(--bs-white);
+    }
+
+    .calendar {
+        height: 20px;
+        width: 20px;
+    }
+
+    .calendar-icon {
+        font-size: 18px;
+        margin-left: 5px;
+    }
+
+    .button-goal {
+        width: 80px;
+        height: 20px;
+        font-size: 12px;
+
+        img {
+            display: none;
+        }
+    }
+
+    .button-export {
+        width: 80px;
+        height: 20px;
+        font-size: 12px;
+
+        img {
+            display: none;
+        } 
+    }
+
+    .container {
+        display: grid;
+        height: 100%;
+        
+        grid-template-columns: 2fr;
+        grid-template-rows: 0.25fr 0.25fr 6.5fr 4fr;
+    }
+
+    .header {
+        grid-column: 1/1;
+        grid-row: 1/2;
+    }
+
+    .sub-header {
+        grid-column: 1/1;
+        grid-row: 2/3;
+    }
+
+    .main {
+        grid-column: 1/1;
+        grid-row: 3/4;
+    }
+
+    .aside {
+        grid-column: 1/1;
+        grid-row: 4/5;
+    }
+
+    .goals-container-ext {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .goals-image {
+        img {
+            height: 10vh;
+            width: 22vw;
+        }
+    }
+
+    .main-ext-enclousure {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .title-graph-1 {
+        width: 180%;
+    }
+
+    .content-graph-1 {
+        width: 180%;
+    }
+
+    .graph-1 {
+        width: 180%;
+    }
+
+    .graph-2 {
+        width: 180%;
+    }
+
+    .alert-ext {
+        display: flex;
+        justify-content: start;
+        height: 15%;
+        width: 100%;
+
+        margin-top: 0px;
+    }
+
+    .alert {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+
+        p {
+            font-size: 12px;
+            margin-bottom: 0px;
+        }
+    }
+}
+
+
+
+
