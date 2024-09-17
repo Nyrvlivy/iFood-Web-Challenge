@@ -1,4 +1,85 @@
-<div>
-    <h1 class="main-title-1">Saúde Operacional</h1>
-    <p class="main-subtitle-light-1">Conteúdo de Saúde Operacional</p>
+<div class="operation-health-container">
+    <header class="header">
+        <div class="header-top">
+            <h1 class="header-top-item main-title-1">
+                <span class="material-symbols-outlined">chevron_left</span>Saúde Operacional
+            </h1>
+
+            <div class="header-top-item export-container">
+                <div class="export-item date-selection-container">
+                    <div class="calendar-range">
+                        <span>09/06/2024</span>
+                        <span>-</span>
+                        <span>15/06/2024</span>
+                        <span class="material-symbols-outlined">calendar_month</span>
+                    </div>
+                </div>
+
+                <button class="export-item btn cancel-button flex-grow-1">
+                    <span class="material-symbols-outlined">download</span>
+                    Exportar
+                </button>
+            </div>
+        </div>
+
+        <div class="header-bottom">
+            <p class="main-subtitle-light-1">
+                Período <em>09/06/2024 - 15/06/2024</em>
+            </p>
+            <p class="content-graph-1">Avalie a Saúde do seu estabelecimento consultando e analisando dados de
+                cancelamentos, produtos melhor avaliados</p>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="analysis-container">
+            <div class="analysis-item overview-container">
+                <p class="main-subtitle-light-1">Overview</p>
+                <img class="overview-chart-image" alt="Indicadores gerais sobre a saúde operacional"
+                    src="src\assets\charts\operational-health-overview.svg" />
+            </div>
+
+            <div class="analysis-item order-problems-container">
+                <p class="main-subtitle-light-1">Problemas com Pedido</p>
+                <img class="order-problems-chart-image" alt="Gráfico sobre tipos de problemas com pedidos"
+                    src="src\assets\charts\order-problems-chart.svg" />
+            </div>
+
+            <div class="analysis-item ratings-container">
+                <p class="main-subtitle-light-1">Avaliações</p>
+                <img class="ratings-chart-image" alt="Indicadores gerais sobre avaliações de pedidos"
+                    src="src\assets\charts\ratings-chart.svg" />
+            </div>
+        </div>
+
+        <p class="main-subtitle-light-1">Cancelamentos</p>
+
+        <ul class="nav nav-underline report-tabs">
+            <li class="nav-item">
+                <a class="nav-link link-danger active" aria-current="page" href="#">Histórico de Problemas</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link link-secondary" href="#">Produtos Pior Avaliados</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link link-secondary" href="#">Produtos Melhor Avaliados</a>
+            </li>
+        </ul>
+
+        <div id="health-report-container">
+            <div class="health-report-table-container"></div>
+            <div class="nav-health-report">
+                <p><strong>Exibindo 1-5 de 15</strong></p>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-outline-secondary">
+                        <span class="material-symbols-outlined">chevron_left</span>
+                    </button>
+                    <button type="button" class="btn btn-outline-dark">
+                        <span class="material-symbols-outlined">chevron_right</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </main>
 </div>

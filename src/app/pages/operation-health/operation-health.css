@@ -1,0 +1,76 @@
+.operation-health-container {
+    margin: 0;
+}
+
+.header-top {
+    height: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.2rem;
+}
+
+.header-top h1 {
+    margin: 0;
+}
+
+.export-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.export-item {
+    margin: 0 0.5rem;
+}
+
+.date-selection-container {
+    background: var(--bs-white);
+    border-radius: 5px;
+    color: var(--subtitle-color-light);
+    text-align: center;
+}
+
+.calendar-range {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.2rem 0.5rem;
+}
+
+.calendar-range span {
+    margin: 0 0.1rem;
+}
+
+.calendar-range .material-symbols-outlined {
+    margin-left: 0.5rem;
+}
+
+.header-bottom em {
+    color: var(--primary-red);
+}
+
+.analysis-container {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.analysis-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.analysis-container img {
+    width: 100%;
+    position: relative;
+    right: 0.2rem;
+}
+
+.report-tabs .nav {
+    --nav-link-color: var(--primary-red);
+}
