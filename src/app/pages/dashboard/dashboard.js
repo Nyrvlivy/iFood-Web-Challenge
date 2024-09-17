@@ -124,12 +124,14 @@ function initializeCharts() {
                 label: 'Vendas',
                 data: [12000, 19000, 15000, 17000, 22000, 24000, 25000],
                 borderColor: 'rgb(255, 99, 132)',
+                backgroundColor: 'rgb(255, 99, 132)',
                 tension: 0.1,
                 fill: false
             }, {
                 label: 'Repasses',
                 data: [10000, 15000, 13000, 14000, 20000, 22000, 23000],
-                borderColor: 'rgb(54, 162, 235)',
+                borderColor: 'rgb(255, 193, 7)',
+                backgroundColor: 'rgb(255, 193, 7)',
                 tension: 0.1,
                 fill: false
             }]
@@ -152,6 +154,7 @@ function initializeCharts() {
                 label: 'Vendas',
                 data: [1200, 1900, 1500, 2200, 2500],
                 borderColor: 'rgb(255, 99, 132)',
+                backgroundColor: 'rgb(255, 99, 132)',
                 tension: 0.1,
                 fill: false
             }]
@@ -186,5 +189,33 @@ function initializeCharts() {
                 legend: { position: 'bottom' }
             }
         }
+    });
+
+    // Gráfico Desempenho Mensal
+    const monthyPerformanceChartCtx = document.getElementById('monthlyPerformanceChart').getContext('2d');
+
+    var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
+    var yValues = [55, 49, 44, 24, 15];
+    var barColors = ["red", "green","blue","orange","brown"];
+
+    new Chart(monthyPerformanceChartCtx, {
+        type: "bar",
+        data: {
+        labels: xValues,
+        datasets: [{
+            backgroundColor: barColors,
+            data: yValues
+        }]
+        },
+        options: {
+            legend: {display: false},
+            title: {
+                display: true,
+                text: "World Wine Production 2018"
+            },
+            scales: {
+                xAxes: [{ticks: {min: 10, max:60}}]
+            }
+    }
     });
 }
