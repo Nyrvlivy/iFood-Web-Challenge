@@ -9,7 +9,7 @@
                     </p>
                     <section class="interactive-chart-section">
                         <div class="performance-chart-container">
-                            <img class="performance-chart-image" alt="performance-map" src="src\assets\charts\performance-map-2.svg"/>
+                            <img class="performance-chart-image" alt="performance-map" src="src\assets\charts\performance-map-1.svg"/>
                         </div>
                     </section>
                     <div class="performance-row">
@@ -140,7 +140,6 @@
                         </div>
                         <p class="main-subtitle-light-1">Público Alvo</p>
                         <div class="target-audience-container">
-                            <!-- Target audience content goes here -->
                             <div class="section promocional">
                                 <p class="main-subtitle-light-2">Novos Clientes</p>
                                 <input type="checkbox" id="novos-clientes-checkbox">
@@ -150,7 +149,7 @@
                                 <div class="age-range-slider">
                                     <span class="main-subtitle-light-2">13</span>
                                     <div class="slider-container">
-                                        <input type="range" id="age-range" min="13" max="100" value="20">
+                                        <input type="range" class="form-range" id="age-range" min="13" max="100" step="1" value="20">
                                         <div class="slider-fill"></div>
                                     </div>
                                     <span class="main-subtitle-light-2">100+</span>
@@ -172,8 +171,8 @@
                             </div>
                         </div>
                         <div class="button-container">
-                            <button class="cancel-button">Cancelar</button>
-                            <button class="apply-button">Aplicar</button>
+                            <button class="cancel-button" onclick="handleCancelButtonClick()">Cancelar</button>
+                            <button class="apply-button" onclick="handleApplyButtonClick()">Aplicar</button>
                         </div>
                     </section>
                 </aside>
