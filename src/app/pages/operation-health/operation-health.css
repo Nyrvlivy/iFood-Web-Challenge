@@ -71,6 +71,38 @@
     right: 0.2rem;
 }
 
-.report-tabs .nav {
-    --nav-link-color: var(--primary-red);
+.report-tabs .nav-link,
+.table-responsive th {
+    font-weight: bold;
+    color: var(--neutral-gray);
+}
+
+.report-tabs .nav-link.active,
+.table-responsive .problems-refund {
+    color: var(--primary-red);
+}
+
+#health-report-footer-container {
+    margin-top: 1rem;
+}
+
+.health-report-nav {
+    height: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.health-report-nav p {
+    color: var(--subtitle-color-light);
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.health-report-nav .btn-group .btn {
+    padding: 0 0.4rem;
+    justify-content: center;
+    align-items: center;
 }
