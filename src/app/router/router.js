@@ -10,17 +10,17 @@ const ITEMS_PER_PAGE = 10;
 const TABLE_NAMES = {
     ENTRIES: "entries",
     SETTLEMENTS: "settlements",
-}
+};
 
 const TOTAL_PAGES = {
     [TABLE_NAMES.SETTLEMENTS]: 0,
     [TABLE_NAMES.ENTRIES]: 0,
-}
+};
 
 const TABLE_BY_ROUTE = {
-    "dashboard": [TABLE_NAMES.SETTLEMENTS, "src/app/components/tables/settlements.html"],
+    dashboard: [TABLE_NAMES.SETTLEMENTS, "src/app/components/tables/settlements.html"],
     "settlement-entries": [TABLE_NAMES.ENTRIES, "src/app/components/tables/settlementEntries.html"],
-}
+};
 
 /**
  * @typedef {Object} Settlement
@@ -49,19 +49,19 @@ const TABLE_BY_ROUTE = {
  **/
 
 const ROUTE_MAP = {
-    "dashboard": "dashboard",
+    dashboard: "dashboard",
 
-    "settlements": "repasses",
-    "repasses": "settlements",
+    settlements: "repasses",
+    repasses: "settlements",
 
     "settlement-entries": "lancamentos-repasse",
     "lancamentos-repasse": "settlement-entries",
 
-    "lancamentos": "entries",
-    "entries": "lancamentos",
+    lancamentos: "entries",
+    entries: "lancamentos",
 
-    "performance": "desempenho",
-    "desempenho": "performance",
+    performance: "desempenho",
+    desempenho: "performance",
 
     "operation-health": "saude-operacional",
     "saude-operacional": "operation-health",
@@ -142,11 +142,10 @@ const makeSettlementEntriesTableRow = (entry) => `
 </a>
 `;
 
-
 function maybeHideTable() {
     const table = document.getElementById(SETTLEMENT_TABLE_ID);
     if (!table) return;
-    table.style.display = 'none';
+    table.style.display = "none";
 }
 
 /** @param {string} route **/
@@ -160,8 +159,7 @@ async function hidratePage(route) {
         const html = /** @type {string} */ (await response.text());
         appContent.innerHTML = html;
 
-        location.hash.substring(2) !== route
-            && history.replaceState(null, null, `#/${ROUTE_MAP[route]}`);
+        location.hash.substring(2) !== route && history.replaceState(null, null, `#/${ROUTE_MAP[route]}`);
 
         let existingLink = document.getElementById(STYLE_ENTRYPOINT);
         existingLink && existingLink.remove();
@@ -192,30 +190,30 @@ function applyPagination(collection, page) {
         filtered.push(collection[i]);
     }
 
-    return filtered
+    return filtered;
 }
 
 /**
-* @param {string} tableName
-* @param {string} tablePath
-* @param {number} page
-**/
+ * @param {string} tableName
+ * @param {string} tablePath
+ * @param {number} page
+ **/
 async function getSettlementsTable(tableName, tablePath, page) {
     const tableRes = await fetch(tablePath);
     const tableHtml = await tableRes.text();
 
     const table = document.getElementById(SETTLEMENT_TABLE_ID);
     if (!table) {
-        table.style.display = 'none'
+        table.style.display = "none";
         return;
     }
-    table.style.display = 'block'
-    table.innerHTML = tableHtml
+    table.style.display = "block";
+    table.innerHTML = tableHtml;
     const tableData = await fetchEntries(tableName);
     TOTAL_PAGES[TABLE_NAMES.SETTLEMENTS] = tableData.length;
     asSettlement(tableData);
 
-    tableData.sort((a, b) => a.status > b.status ? 1 : -1)
+    tableData.sort((a, b) => (a.status > b.status ? 1 : -1));
     const displayedData = applyPagination(tableData, page);
 
     const paginationLabel = document.getElementById(PAGINATION_LABEL);
@@ -228,67 +226,62 @@ async function getSettlementsTable(tableName, tablePath, page) {
     const isLastPage = page >= totalPages;
     paginationLabel.textContent = label;
 
-    isLastPage
-        ? nextPage.classList.add("disabled")
-        : nextPage.classList.remove("disabled");
-    page === 1
-        ? prevPage.classList.add("disabled")
-        : prevPage.classList.remove("disabled");
-
+    isLastPage ? nextPage.classList.add("disabled") : nextPage.classList.remove("disabled");
+    page === 1 ? prevPage.classList.add("disabled") : prevPage.classList.remove("disabled");
 
     const getTemplate = (entry) => {
         const borderMap = {
             "Em aberto": "border-color-gray",
-            "Agendado": "border-color-blue",
-            "Pago": "border-color-green",
-        }
+            Agendado: "border-color-blue",
+            Pago: "border-color-green",
+        };
         const colorMap = {
             "Em aberto": "color-gray",
-            "Agendado": "color-blue",
-            "Pago": "color-green",
-        }
+            Agendado: "color-blue",
+            Pago: "color-green",
+        };
         entry["borderColor"] = borderMap[entry.status];
         entry["textColor"] = colorMap[entry.status];
         return makeSettlementsTableRow(entry);
-    }
+    };
 
     populateTable(displayedData, getTemplate);
 }
 
 /**
-* @template T
-* @param {T[]} tableData
-* @param {(T) => string} getTemplate
-**/
+ * @template T
+ * @param {T[]} tableData
+ * @param {(T) => string} getTemplate
+ **/
 function populateTable(tableData, getTemplate) {
     const entries = document.getElementById(TABLE_ENTRIES);
 
     let accumulator = "";
     for (const entry of tableData) {
-        const template = getTemplate(entry)
-        accumulator += template
+        const template = getTemplate(entry);
+        accumulator += template;
     }
 
-    entries.innerHTML = accumulator
+    entries.innerHTML = accumulator;
 }
 
 /**
-* @param {string} tableName
-* @param {string} tablePath
-* @param {number} page
-**/
+ * @param {string} tableName
+ * @param {string} tablePath
+ * @param {number} page
+ **/
 async function getEntriesTable(tableName, tablePath, page) {
     const tableRes = await fetch(tablePath);
     const tableHtml = await tableRes.text();
 
     const table = document.getElementById(SETTLEMENT_TABLE_ID);
     if (!table) {
-        table.style.display = 'none'
+        table.style.display = "none";
         return;
     }
-    table.style.display = 'block'
+    table.style.display = "block";
 
-    table.innerHTML = tableHtml
+    table.innerHTML = tableHtml;
     const tableData = await fetchEntries(tableName);
     TOTAL_PAGES[TABLE_NAMES.ENTRIES] = tableData.length;
     asEntry(tableData);
@@ -304,43 +297,39 @@ async function getEntriesTable(tableName, tablePath, page) {
     const isLastPage = page >= totalPages;
     paginationLabel.textContent = label;
 
-    isLastPage
-        ? nextPage.classList.add("disabled")
-        : nextPage.classList.remove("disabled");
-    page === 1
-        ? prevPage.classList.add("disabled")
-        : prevPage.classList.remove("disabled");
+    isLastPage ? nextPage.classList.add("disabled") : nextPage.classList.remove("disabled");
+    page === 1 ? prevPage.classList.add("disabled") : prevPage.classList.remove("disabled");
 
     const getTemplate = (entry) => {
         const borderMap = {
-            "Concluido": "border-color-green",
-            "Pendente": "border-color-yellow",
-            "Cancelado": "border-color-red",
-        }
+            Concluido: "border-color-green",
+            Pendente: "border-color-yellow",
+            Cancelado: "border-color-red",
+        };
         const colorMap = {
-            "Concluido": "color-green",
-            "Pendente": "color-yellow",
-            "Cancelado": "color-red",
-        }
+            Concluido: "color-green",
+            Pendente: "color-yellow",
+            Cancelado: "color-red",
+        };
         entry["borderColor"] = borderMap[entry.status];
         entry["textColor"] = colorMap[entry.status];
         return makeSettlementEntriesTableRow(entry);
-    }
+    };
 
     populateTable(displayedData, getTemplate);
 }
 
 /**
-* @param {string} tableName
-* @param {string} tablePath
-**/
+ * @param {string} tableName
+ * @param {string} tablePath
+ **/
 async function getPageTable(tableName, tablePath) {
     const params = new URLSearchParams(location.search);
     const pageStr = params.get("page") || "1";
     const page = +pageStr;
 
-    tableName === TABLE_NAMES.ENTRIES && await getEntriesTable(tableName, tablePath, page);
-    tableName === TABLE_NAMES.SETTLEMENTS && await getSettlementsTable(tableName, tablePath, page);
+    tableName === TABLE_NAMES.ENTRIES && (await getEntriesTable(tableName, tablePath, page));
+    tableName === TABLE_NAMES.SETTLEMENTS && (await getSettlementsTable(tableName, tablePath, page));
 }
 
 /**
@@ -356,8 +345,8 @@ async function navigateTo(route) {
         maybeHideTable();
         return;
     }
-    const [tableName, tablePath] = result
-    tablePath && getPageTable(tableName, tablePath)
+    const [tableName, tablePath] = result;
+    tablePath && getPageTable(tableName, tablePath);
 }
 
 /**
@@ -365,8 +354,8 @@ async function navigateTo(route) {
  * @returns {asserts data is Settlement[]}
  */
 function asSettlement(data) {
-    if (!data.every(item => Object.keys(item).length == 5)) {
-        throw new Error('Data is not an array of settlements');
+    if (!data.every((item) => Object.keys(item).length == 5)) {
+        throw new Error("Data is not an array of settlements");
     }
 }
 
@@ -375,8 +364,8 @@ function asSettlement(data) {
  * @returns {asserts data is Entry[]}
  */
 function asEntry(data) {
-    if (!data.every(item => Object.keys(item).length >= 5)) {
-        throw new Error('Data is not an array of entries');
+    if (!data.every((item) => Object.keys(item).length >= 5)) {
+        throw new Error("Data is not an array of entries");
     }
 }
 
@@ -385,7 +374,7 @@ function prevPage() {
     const pageStr = params.get("page") || "1";
     const page = +pageStr;
 
-    const prevPage = Math.max(page - 1, 1)
+    const prevPage = Math.max(page - 1, 1);
     params.set("page", prevPage);
     location.search = params;
 }
@@ -398,7 +387,7 @@ function nextPage() {
     const route = location.hash.substring(2);
     const [tableName, _] = TABLE_BY_ROUTE[ROUTE_MAP[route]];
 
-    const nextPage = Math.min(page + 1, TOTAL_PAGES[tableName])
+    const nextPage = Math.min(page + 1, TOTAL_PAGES[tableName]);
     params.set("page", nextPage);
     location.search = params;
 }
@@ -411,7 +400,7 @@ async function fetchEntries(tableName) {
     const tableMap = {
         [TABLE_NAMES.SETTLEMENTS]: "src/data/settlements.json",
         [TABLE_NAMES.ENTRIES]: "src/data/entries.json",
-    }
+    };
     const res = await fetch(tableMap[tableName]);
     return await res.json();
 }
