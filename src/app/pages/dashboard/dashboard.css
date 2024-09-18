@@ -19,3 +19,24 @@ h2 {
     font-size: 1.25rem;
     margin-bottom: 1rem;
 }
+
+.overview-image-container{
+    overflow: hidden;
+    position: relative;
+}
+.overview-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top left;
+    padding-left: 20px;
+    padding-bottom: 10px;
+}
+.daily-image, .goals-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top left;
+    padding-left: 0px;
+    padding-bottom: 10px;
+}

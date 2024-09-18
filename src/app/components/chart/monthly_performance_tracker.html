@@ -1,0 +1,217 @@
+    <title>Monthly Performance Tracker</title>
+    <style>
+        .monthly-performance-container {
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 0px;
+            max-width: 600px;
+            margin: 0 auto;
+            font-family: "Roboto", sans-serif;
+        }
+
+        .chart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .legend {
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            flex: 1;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            font-size: 12px;
+            color: #707070;
+            margin-right: 15px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .legend-color {
+            min-width: 10px;
+            width: 10px;
+            height: 10px;
+            margin-right: 5px;
+            border-radius: 2px;
+            flex-shrink: 0;
+        }
+
+        .options {
+            font-size: 18px;
+            color: #707070;
+            margin-left: 15px;
+            flex-shrink: 0;
+        }
+
+        .chart-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .month {
+            width: 30px;
+            font-size: 13px;
+            color: #707070;
+            flex-shrink: 0;
+        }
+
+        .bar-container {
+            flex-grow: 1;
+            height: 12px;
+            display: flex;
+            border-radius: 6px;
+            overflow: hidden;
+            margin: 0 10px;
+        }
+
+        .bar {
+            height: 100%;
+        }
+
+        .bar-goals { background-color: #fef1db; }
+        .bar-sales { background-color: #fd9f00; }
+        .bar-cancellations { background-color: #fe8bbf; }
+
+        .values {
+            width: 70px;
+            font-size: 13px;
+            color: #828282;
+            text-align: right;
+            flex-shrink: 0;
+        }
+
+        .cancellations {
+            width: 30px;
+            font-size: 12px;
+            color: #d74d8b;
+            text-align: right;
+            flex-shrink: 0;
+        }
+
+        .x-axis {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 5px;
+            padding-left: 30px;
+            padding-right: 110px;
+            font-size: 12px;
+            color: #707070;
+        }
+
+        @media (max-width: 480px) {
+            .monthly-performance-container {
+                padding: 0px;
+            }
+
+            .legend-item {
+                font-size: 10px;
+                margin-right: 10px;
+            }
+
+            .x-axis {
+                padding-right: 85px;
+                padding-left: 0px;
+                justify-content: space-evenly;
+            }
+
+            .values, .cancellations {
+                font-size: 10px;
+            }
+
+            .month {
+                width: 25px;
+                font-size: 11px;
+            }
+
+            .bar-container {
+                margin: 0 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="monthly-performance-container">
+        <div class="chart-header">
+            <div class="legend">
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: #fef1db;"></div>
+                    Goals
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: #fd9f00;"></div>
+                    Sales
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: #fe8bbf;"></div>
+                    Cancellations
+                </div>
+            </div>
+            <div class="options">•••</div>
+        </div>
+        <div class="chart-row">
+            <div class="month">Dec</div>
+            <div class="bar-container">
+                <div class="bar bar-sales" style="width: 60%;"></div>
+                <div class="bar bar-cancellations" style="width: 5%;"></div>
+                <div class="bar bar-goals" style="width: 35%;"></div>
+            </div>
+            <div class="values">38,402.95</div>
+            <div class="cancellations">300</div>
+        </div>
+        <div class="chart-row">
+            <div class="month">Jan</div>
+            <div class="bar-container">
+                <div class="bar bar-sales" style="width: 65%;"></div>
+                <div class="bar bar-cancellations" style="width: 3%;"></div>
+                <div class="bar bar-goals" style="width: 32%;"></div>
+            </div>
+            <div class="values">50,553.14</div>
+            <div class="cancellations">244</div>
+        </div>
+        <div class="chart-row">
+            <div class="month">Feb</div>
+            <div class="bar-container">
+                <div class="bar bar-sales" style="width: 45%;"></div>
+                <div class="bar bar-cancellations" style="width: 5%;"></div>
+                <div class="bar bar-goals" style="width: 50%;"></div>
+            </div>
+            <div class="values">29,671.73</div>
+            <div class="cancellations">236</div>
+        </div>
+        <div class="chart-row">
+            <div class="month">Mar</div>
+            <div class="bar-container">
+                <div class="bar bar-sales" style="width: 35%;"></div>
+                <div class="bar bar-cancellations" style="width: 3%;"></div>
+                <div class="bar bar-goals" style="width: 62%;"></div>
+            </div>
+            <div class="values">22,455.62</div>
+            <div class="cancellations">162</div>
+        </div>
+        <div class="chart-row">
+            <div class="month">Apr</div>
+            <div class="bar-container">
+                <div class="bar bar-sales" style="width: 40%;"></div>
+                <div class="bar bar-cancellations" style="width: 2%;"></div>
+                <div class="bar bar-goals" style="width: 58%;"></div>
+            </div>
+            <div class="values">25,993.02</div>
+            <div class="cancellations">148</div>
+        </div>
+        <div class="x-axis">
+            <div>0</div>
+            <div>10K</div>
+            <div>20K</div>
+            <div>30K</div>
+            <div>40K</div>
+            <div>50K</div>
+        </div>
+    </div>
