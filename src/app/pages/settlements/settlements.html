@@ -1,4 +1,128 @@
-<div>
+<div class="d-flex justify-content-between">
     <h1 class="main-title-1">Repasses</h1>
-    <p class="main-subtitle-light-1">Conteúdo de Repasses</p>
+    <div>
+        <button type="button" class="btn btn-danger align-items-center">
+            <svg width="16" height="17" viewBox="0 0 16 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.00006 22C1.45006 22 0.979228 21.8042 0.587561 21.4125C0.195894 21.0208 6.10352e-05 20.55 6.10352e-05 20V9C6.10352e-05 8.45 0.195894 7.97917 0.587561 7.5875C0.979228 7.19583 1.45006 7 2.00006 7H5.00006V9H2.00006V20H14.0001V9H11.0001V7H14.0001C14.5501 7 15.0209 7.19583 15.4126 7.5875C15.8042 7.97917 16.0001 8.45 16.0001 9V20C16.0001 20.55 15.8042 21.0208 15.4126 21.4125C15.0209 21.8042 14.5501 22 14.0001 22H2.00006ZM7.00006 15V3.825L5.40006 5.425L4.00006 4L8.00006 0L12.0001 4L10.6001 5.425L9.00006 3.825V15H7.00006Z" fill="white"/>
+            </svg>
+            Exportar
+        </button>
+    </div>
+</div>
+
+<h2 class="main-subtitle-dark-1 text-center text-md-start mb-3">Resumo Financeiro do Período <span class="color-red fw-bold">09/06/2024 - 15/06/2024<span></h2>
+<div class="row gap-3">
+    <div class="col px-3 py-2 d-flex justify-content-between align-items-center bg-white rounded">
+        <div>
+            <p class="mb-2 fs-6">Valor total líquido</p>
+            <p class="fw-bold color-green mb-0">R$ <span class="fs-3">22.536,43</span></p>
+        </div>
+        <div>
+            <img width="200" height="180" src="src/assets/images/pc-guy.svg" />
+        </div>
+    </div>
+    <div class="col p-4 bg-red-grad d-flex justify-content-center align-items-center fs-1 text-center text-white fw-bold fst-italic quote rounded">
+        <p>“A melhor maneira de prever o futuro é criá-lo.”</p>
+    </div>
+</div>
+
+<div class="row mt-4 gap-3">
+    <div class="col rounded bg-white p-3">
+        <p class="mb-0 fs-6">Valor bruto</p>
+        <p class="fw-bold mb-0">R$ <span class="fs-3">22.536,43</span></p>
+    </div>
+    <div class="col rounded bg-white p-3">
+        <p class="mb-0 fs-6">Valor recebido via loja</p>
+        <p class="fw-bold mb-0">R$ <span class="fs-3">0,00</span></p>
+    </div>
+    <div class="col rounded bg-white p-3 d-flex justify-content-between align-items-center">
+        <div>
+            <p class="mb-0 fs-6">Valor recebido via iFood</p>
+            <p class="fw-bold mb-0">R$ <span class="fs-3">22.536,43</span></p>
+        </div>
+
+        <img height="40" src="src/assets/icons/ifood-red-logo-mini.svg">
+    </div>
+</div>
+
+<div class="d-flex justify-content-center align-items-center gap-2 p-2 bg-red-grad text-white rounded-4 mt-4">
+    <span class="material-symbols-outlined">info</span>
+    <div class="fs-6 fs-md-4 fw-bold">Seu repasse possui efeitos de contrato de registro de recebíveis</div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-12 col-md-8">
+        <div class="row gap-3 color-subtitle">
+            <div class="col-12 col-md-8 bg-white rounded p-3">
+                <p class="mb-0 fs-5 fw-bold">Total de vendas no período</p>
+                <p class="mb-0 fs-6">242 vendas concluídas</p>
+            </div>
+            <div class="col-12 col-md-3 bg-white rounded p-3 d-flex align-items-center">
+                <p class="fw-bold mb-0 color-green">R$ <span class="fs-3">22.536,43</span></p>
+            </div>
+        </div>
+
+        <div class="row mt-4 gap-3 color-subtitle">
+            <div class="col-12 col-md-8 bg-white rounded p-3">
+                <p class="mb-0 fs-5 fw-bold">Recebido via loja</p>
+                <p class="mb-0 fs-6">0 vendas concluídas</p>
+            </div>
+            <div class="col-12 col-md-3 bg-white rounded p-3 d-flex align-items-center">
+                <p class="fw-bold mb-0">R$ <span class="fs-3">0,00</span></p>
+            </div>
+        </div>
+
+        <div class="row mt-4 gap-3 color-subtitle">
+            <div class="col-12 col-md-8 bg-white rounded p-3">
+                <p class="mb-0 fs-5 fw-bold">Comissão para retirar (11%)</p>
+                <p class="mb-0 fs-6">Comissão sobre valor das vendas dos pedidos retiradas diretamente no estabelecimento (0 Pedidos)</p>
+            </div>
+            <div class="col-12 col-md-3 bg-white rounded p-3 d-flex align-items-center">
+                <p class="fw-bold mb-0 color-red">-R$ <span class="fs-3">2,479,00</span></p>
+            </div>
+        </div>
+
+        <div class="row mt-4 gap-3 color-subtitle">
+            <div class="col-12 col-md-8 bg-white rounded p-3">
+                <p class="mb-0 fs-5 fw-bold">Taxa de transação (3%)</p>
+                <p class="mb-0 fs-6">Cobrada de todos os serviços financeiros com pagamento via iFood</p>
+            </div>
+            <div class="col-12 col-md-3 bg-white rounded p-3 d-flex align-items-center">
+                <p class="fw-bold mb-0">R$ <span class="fs-3">0,00</span></p>
+            </div>
+        </div>
+
+        <div class="row mt-4 gap-3 color-subtitle">
+            <div class="col-12 col-md-8 bg-white rounded p-3">
+                <p class="mb-0 fs-5 fw-bold">Outros lançamentos</p>
+                <p class="mb-0 fs-6">Créditos e cobranças avulsas</p>
+
+                <p class="mb-0 fs-5 fw-bold">Mensalidade</p>
+                <p class="mb-0 fs-5 fw-bold">Reembolso de taxa de serviço <span class="fs-5">(10 pedidos)</span></p>
+                <p class="mb-0 fs-5 fw-bold">Reembolso da taxa de serviço do iFood Benefícios</p>
+                <p class="mb-0 fs-5 fw-bold">Incentivo MultiPedidos</p>
+                <p class="mb-0 fs-5 fw-bold">Taxa de Serviço iFood Entrega</p>
+            </div>
+            <div class="col-12 col-md-3 bg-white rounded p-3">
+                <p class="fw-bold mb-0 color-red">-R$ <span class="fs-3">98,50</span></p>
+                <p class="fw-bold mb-0 color-yellow">-R$ <span class="fs-4">100,00</span></p>
+                <p class="fw-bold mb-0 color-green">R$ <span class="fs-5">1,50</span></p>
+                <p class="fw-bold mb-0">R$ <span class="fs-5">0,00</span></p>
+                <p class="fw-bold mb-0">R$ <span class="fs-5">0,00</span></p>
+                <p class="fw-bold mb-0">R$ <span class="fs-5">0,00</span></p>
+            </div>
+        </div>
+
+        <div class="row mt-4 gap-3 color-subtitle">
+            <div class="col-12 col-md-8 bg-white rounded p-3 d-flex justify-content-between align-items-center">
+                <p class="color-subtitle fs-5 fw-bold mb-0">Valor total líquido</p>
+            </div>
+            <div class="col-12 col-md-3 bg-white rounded p-3">
+                <p class="fw-bold color-green mb-0 fs-6">R$ <span class="fs-3">22.536,43</span></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-md-4">
+        <img class="healthy-food" src="src/assets/images/healthy-food.svg" />
+    </div>
 </div>

@@ -6,6 +6,9 @@
     --primary-yellow-gradient: linear-gradient(164deg, #ffbf44 0%, #f3ac23 97.77%);
     --primary-pink-gradient: linear-gradient(164deg, #fe8bc1 0%, #ef62a4 97.78%);
     --primary-green-gradient: linear-gradient(164deg, #85f17c 0%, rgba(70, 205, 59, 0.95) 97.78%);
+    --primary-green: #03C158;
+    --primary-yellow: #FD9F00;
+    --primary-blue: #32B2DB;
     --light-red: #e93d3d;
     --heading-color-dark: #555;
     --subtitle-color-light: #929292;

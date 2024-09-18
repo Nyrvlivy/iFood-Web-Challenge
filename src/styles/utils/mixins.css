@@ -145,3 +145,114 @@
     width: var(--24, 24px);
     height: var(--24, 24px);
 }
+
+.bg-red-grad {
+    background: var(--primary-red-gradient);
+}
+
+.bg-yellow-grad {
+    background: var(--primary-yellow-gradient);
+}
+
+.bg-pink-grad {
+    background: var(--primary-pink-gradient);
+}
+
+.bg-green-grad {
+    background: var(--primary-green-gradient);
+}
+
+.bg-subtitle {
+    background: var(--subtitle-color-light);
+}
+
+.bg-block-gray {
+    background: var(--background-block-gray);
+}
+
+.color-green {
+    color: var(--primary-green);
+}
+
+.color-yellow {
+    color: var(--primary-yellow);
+}
+
+.color-gray {
+    color: var(--neutral-gray);
+}
+
+.color-subtitle {
+    color: var(--subtitle-color-light);
+}
+
+.color-blue {
+    color: var(--primary-blue);
+}
+
+.color-red {
+    color: var(--primary-red);
+}
+
+.border-color-blue {
+    border-color: var(--primary-blue) !important;
+}
+
+.border-color-yellow {
+    border-color: var(--primary-yellow) !important;
+}
+
+.border-color-red {
+    border-color: var(--primary-red) !important;
+}
+
+.border-color-gray {
+    border-color: var(--neutral-gray) !important;
+}
+
+.border-color-green {
+    border-color: var(--primary-green) !important;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+@media (max-width: 800px) {
+    .table-entry > div {
+        min-width: 150px;
+        max-width: 150px;
+    }
+
+    .table-entry > div:not(:first-child) {
+        padding: 0 1rem;
+    }
+
+    .table-header > div {
+        padding: 0 1rem;
+        min-width: 150px;
+        max-width: 150px;
+    }
+}
+
+@media (min-width: 801px) {
+    .table-header > .table-entry {
+        --bs-gutter-x: 1.5rem;
+        --bs-gutter-y: 0;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: calc(-1 * var(--bs-gutter-y));
+        margin-right: calc(-.5 * var(--bs-gutter-x));
+        margin-left: calc(-.5 * var(--bs-gutter-x))
+    }
+}
+
+.table-entry:hover {
+    background: hsl(from var(--accent-light-blue) h s calc(l + 30)) !important;
+    transform: scale(1.005);
+    transition: transform 0.1s ease-in-out;
+}
+
+.table-header {
+    border-bottom: 1px solid var(--background-light-gray);
+}

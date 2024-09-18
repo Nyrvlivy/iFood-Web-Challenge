@@ -33,6 +33,7 @@ html {
     height: 100%;
     background: var(--background-light-gray);
     flex-grow: 1;
+    overflow: auto;
 }
 
 #app-content {

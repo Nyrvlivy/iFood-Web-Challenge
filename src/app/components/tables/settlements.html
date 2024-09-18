@@ -1,0 +1,47 @@
+<div class="d-flex bg-block-gray pt-3 rounded-top table-header overflow-auto overflow-sm-hidden">
+    <div class="col-md-2">
+        <div class="d-flex content-align-center">
+            <p class="fw-bold fs-md-5 fs-7 color-gray">Status</p>
+            <span class="material-symbols-outlined color-gray">arrow_drop_down</span>
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="d-flex content-align-center">
+            <p class="fw-bold fs-md-5 fs-7 color-gray">Previsão</p>
+            <span class="material-symbols-outlined color-gray">arrow_drop_down</span>
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="d-flex content-align-center">
+            <p class="fw-bold fs-md-5 fs-7 color-gray">Período da apuração</p>
+            <span class="material-symbols-outlined">arrow_drop_down</span>
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="d-flex content-align-center">
+            <p class="fw-bold fs-md-5 fs-7 color-gray">Valor de vendas</p>
+            <span class="material-symbols-outlined">arrow_drop_down</span>
+        </div>
+    </div>
+    <div class="col-md">
+        <div class="d-flex content-align-center">
+            <p class="fw-bold color-gray fs-md-5 fs-7">Valor do repasse</p>
+            <span class="material-symbols-outlined">arrow_drop_down</span>
+        </div>
+    </div>
+</div>
+
+<div id="table-entries" class="overflow-auto overflow-sm-hidden"></div>
+<div class="d-flex justify-content-between align-items-center mt-3">
+    <p id="pagination-label" class="mb-0 fw-bold fs-6 color-gray"></p>
+    <nav>
+        <ul class="pagination mb-0">
+            <li id="prev-page" class="page-item">
+                <span class="material-symbols-outlined page-link cursor-pointer" onclick="prevPage()">chevron_left</span>
+            </li>
+            <li id="next-page" class="page-item">
+                <span class="material-symbols-outlined page-link cursor-pointer" onclick="nextPage()">chevron_right</span>
+            </li>
+        </ul>
+    </nav>
+</div>

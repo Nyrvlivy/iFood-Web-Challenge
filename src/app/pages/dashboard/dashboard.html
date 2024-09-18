@@ -1,4 +1,148 @@
-<div>
+<div class="d-flex justify-content-between">
     <h1 class="main-title-1">Dashboard</h1>
-    <p class="main-subtitle-light-1">Valor bruto das vendas</p>
+    <div>
+        <button type="button" class="btn btn-danger align-items-center">
+            <svg width="16" height="17" viewBox="0 0 16 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.00006 22C1.45006 22 0.979228 21.8042 0.587561 21.4125C0.195894 21.0208 6.10352e-05 20.55 6.10352e-05 20V9C6.10352e-05 8.45 0.195894 7.97917 0.587561 7.5875C0.979228 7.19583 1.45006 7 2.00006 7H5.00006V9H2.00006V20H14.0001V9H11.0001V7H14.0001C14.5501 7 15.0209 7.19583 15.4126 7.5875C15.8042 7.97917 16.0001 8.45 16.0001 9V20C16.0001 20.55 15.8042 21.0208 15.4126 21.4125C15.0209 21.8042 14.5501 22 14.0001 22H2.00006ZM7.00006 15V3.825L5.40006 5.425L4.00006 4L8.00006 0L12.0001 4L10.6001 5.425L9.00006 3.825V15H7.00006Z" fill="white"/>
+            </svg>
+            Exportar
+        </button>
+    </div>
+</div>
+
+<div class="row mb-4 gap-3">
+    <div class="col-12 col-md">
+        <p class="color-gray fw-bold mb-2 fs-6">Valor bruto das vendas</p>
+        <div class="row">
+            <div class="col-8 bg-white rounded-start">
+                <div class="ps-2 pt-3 pb-2">
+                    <p class="fw-bold mb-1">R$ <span class="fs-3">80.903,51</span></p>
+                    <p class="mb-0 color-gray">2492 pedidos concluídos</p>
+                    <p class="mb-0 color-gray">142 pedidos cancelados</p>
+                </div>
+                <div class="d-flex justify-content-end">
+                    <p class="text-decoration-underline fw-bold mb-2">Ver mais</p>
+                </div>
+            </div>
+            <div class="col-4 bg-yellow-grad rounded-end d-flex align-items-center justify-content-center">
+                <img src="src/assets/icons/cart.svg" />
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 col-md">
+        <p class="color-gray fw-bold mb-2 fs-6">Valor recebido via loja</p>
+        <div class="row">
+            <div class="col-8 bg-white rounded-start">
+                <div class="ps-2 pt-3 pb-2">
+                    <p class="fw-bold mb-1">R$ <span class="fs-3">13.502,31</span></p>
+                    <p class="mb-0 color-gray">&nbsp</p>
+                    <p class="mb-0 color-gray">&nbsp</p>
+                </div>
+                <div class="d-flex justify-content-end">
+                    <p class="fw-bold mb-2">&nbsp</p>
+                </div>
+            </div>
+            <div class="col-4 bg-pink-grad rounded-end d-flex align-items-center justify-content-center">
+                <img src="src/assets/icons/store.svg" />
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 col-md">
+        <p class="color-gray fw-bold mb-2 fs-6">Valor recebido via iFood</p>
+        <div class="row">
+            <div class="col-8 bg-white rounded-start">
+                <div class="ps-2 pt-3 pb-2">
+                    <p class="fw-bold mb-1">R$ <span class="fs-3">67.437,34</span></p>
+                    <p class="mb-0 color-gray">&nbsp</p>
+                    <p class="mb-0 color-gray">&nbsp</p>
+                </div>
+                <div class="d-flex justify-content-end">
+                    <p class="fw-bold mb-2">&nbsp</p>
+                </div>
+            </div>
+            <div class="col-4 bg-red-grad rounded-end d-flex align-items-center justify-content-center">
+                <img src="src/assets/icons/ifood-white-logo-mini.svg" />
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 col-md">
+        <p class="color-gray fw-bold mb-2 fs-6">Valor líquido</p>
+        <div class="row">
+            <div class="col-8 bg-white rounded-start">
+                <div class="ps-2 pt-3 pb-2">
+                    <p class="color-green fw-bold mb-1">R$ <span class="fs-3">54.213,46</span></p>
+                    <p class="mb-0 color-gray">&nbsp</p>
+                    <p class="mb-0 color-gray">&nbsp</p>
+                </div>
+                <div class="d-flex justify-content-end">
+                    <p class="fw-bold mb-2">&nbsp</p>
+                </div>
+            </div>
+            <div class="col-4 bg-green-grad rounded-end d-flex align-items-center justify-content-center">
+                <img src="src/assets/icons/money.svg" />
+            </div>
+        </div>
+    </div>
+</div>
+
+<p class="fw-bold mb-2 fs-4">Overview</p>
+
+<div class="row mb-4">
+    <div class="col-12 col-md-5 mt-4 mt-md-0">
+        <p class="color-gray fw-bold fs-6 mb-2">Desempenho Semanal</p>
+        <div class="bg-white rounded p-3">
+            <img class="w-100" src="src/assets/charts/weekly-performance-chart.svg" />
+        </div>
+    </div>
+    <div class="col-12 col-md-4 mt-4 mt-md-0">
+        <div class="row">
+            <p class="fw-bold color-gray mb-2 fs-6">Desempenho Diário</p>
+            <div class="col">
+                <div class="bg-white rounded p-3">
+                    <img class="w-100" src="src/assets/charts/daily-performance-chart.svg" />
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <p class="color-gray fw-bold fs-6 mb-2">Progresso de Metas</p>
+                <div class="col-12 col-md">
+                <div class="bg-white rounded p-3">
+                    <img class="w-100" src="src/assets/charts/goal-progress-chart.svg" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 col-md-3 mt-4 mt-md-0">
+        <div class="row">
+            <div class="col">
+                <p class="fw-bold mb-2 color-gray fs-6">Desempenho Mensal</p>
+                <div class="bg-white rounded p-3">
+                    <img class="w-100" src="src/assets/charts/monthly-performance-chart.svg" />
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <p class="fw-bold mb-2 color-gray fs-6">Destaques</p>
+            <div class="col">
+                <div class="bg-white rounded p-3">
+                    <img class="w-100" src="src/assets/charts/featured-month-chart.svg" />
+                </div>
+            </div>
+            <div class="col">
+                <div class="bg-white rounded p-3">
+                    <img class="w-100" src="src/assets/charts/average-rating-chart.svg" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mb-4">
+    <p class="fw-bold mb-2 fs-4">Meus Repasses</p>
+    <p class="color-gray fw-bold fs-6 mb-2">Resumo do histórico de repasses.</p>
 </div>

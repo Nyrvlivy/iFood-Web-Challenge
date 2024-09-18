@@ -1,8 +1,8 @@
 [
     {
         "status": "Em aberto",
-        "previsao": "26/04/2025",
-        "periodo_apuracao": "27/02/2024 - 02/01/2025",
+        "previsao": "16/06/2024",
+        "periodo_apuracao": "16/06/2024 - 22/06/2024",
         "valor_vendas": "R$17871,00",
         "valor_repasse": "R$84180,00"
     },
@@ -14,20 +14,6 @@
         "valor_repasse": "R$98496,00"
     },
     {
-        "status": "Em aberto",
-        "previsao": "19/05/2024",
-        "periodo_apuracao": "26/08/2024 - 19/12/2024",
-        "valor_vendas": "R$94957,00",
-        "valor_repasse": "R$15542,00"
-    },
-    {
-        "status": "Agendado",
-        "previsao": "09/07/2024",
-        "periodo_apuracao": "21/07/2024 - 20/12/2024",
-        "valor_vendas": "R$20146,00",
-        "valor_repasse": "R$73630,00"
-    },
-    {
         "status": "Pago",
         "previsao": "22/06/2025",
         "periodo_apuracao": "28/02/2024 - 23/09/2024",
@@ -35,25 +21,11 @@
         "valor_repasse": "R$44285,00"
     },
     {
-        "status": "Em aberto",
-        "previsao": "11/01/2024",
-        "periodo_apuracao": "01/08/2024 - 11/07/2025",
-        "valor_vendas": "R$44753,00",
-        "valor_repasse": "R$51987,00"
-    },
-    {
         "status": "Pago",
         "previsao": "11/05/2024",
         "periodo_apuracao": "12/10/2023 - 26/08/2025",
         "valor_vendas": "R$75016,00",
         "valor_repasse": "R$34049,00"
-    },
-    {
-        "status": "Em aberto",
-        "previsao": "17/08/2024",
-        "periodo_apuracao": "10/10/2023 - 05/03/2025",
-        "valor_vendas": "R$60132,00",
-        "valor_repasse": "R$48314,00"
     },
     {
         "status": "Pago",
@@ -77,39 +49,11 @@
         "valor_repasse": "R$46886,00"
     },
     {
-        "status": "Agendado",
-        "previsao": "29/11/2023",
-        "periodo_apuracao": "23/01/2024 - 21/07/2025",
-        "valor_vendas": "R$98531,00",
-        "valor_repasse": "R$68791,00"
-    },
-    {
-        "status": "Agendado",
-        "previsao": "26/03/2025",
-        "periodo_apuracao": "26/08/2024 - 08/11/2024",
-        "valor_vendas": "R$52909,00",
-        "valor_repasse": "R$13068,00"
-    },
-    {
-        "status": "Em aberto",
-        "previsao": "05/12/2023",
-        "periodo_apuracao": "17/05/2024 - 01/05/2025",
-        "valor_vendas": "R$36632,00",
-        "valor_repasse": "R$80341,00"
-    },
-    {
         "status": "Pago",
         "previsao": "10/06/2025",
         "periodo_apuracao": "31/12/2023 - 16/09/2024",
         "valor_vendas": "R$47730,00",
         "valor_repasse": "R$1809,00"
-    },
-    {
-        "status": "Em aberto",
-        "previsao": "19/05/2024",
-        "periodo_apuracao": "16/04/2024 - 18/12/2024",
-        "valor_vendas": "R$28791,00",
-        "valor_repasse": "R$16793,00"
     },
     {
         "status": "Pago",
@@ -119,39 +63,11 @@
         "valor_repasse": "R$61058,00"
     },
     {
-        "status": "Em aberto",
-        "previsao": "26/11/2023",
-        "periodo_apuracao": "19/09/2023 - 27/09/2024",
-        "valor_vendas": "R$20007,00",
-        "valor_repasse": "R$13365,00"
-    },
-    {
-        "status": "Em aberto",
-        "previsao": "04/10/2023",
-        "periodo_apuracao": "21/08/2024 - 20/01/2025",
-        "valor_vendas": "R$87907,00",
-        "valor_repasse": "R$36230,00"
-    },
-    {
-        "status": "Agendado",
-        "previsao": "10/01/2025",
-        "periodo_apuracao": "23/06/2024 - 24/07/2025",
-        "valor_vendas": "R$14920,00",
-        "valor_repasse": "R$60572,00"
-    },
-    {
         "status": "Pago",
         "previsao": "06/08/2024",
         "periodo_apuracao": "21/11/2023 - 12/02/2025",
         "valor_vendas": "R$23799,00",
         "valor_repasse": "R$63955,00"
-    },
-    {
-        "status": "Em aberto",
-        "previsao": "11/10/2023",
-        "periodo_apuracao": "13/04/2024 - 10/04/2025",
-        "valor_vendas": "R$61878,00",
-        "valor_repasse": "R$88217,00"
     },
     {
         "status": "Pago",
@@ -161,67 +77,11 @@
         "valor_repasse": "R$38562,00"
     },
     {
-        "status": "Agendado",
-        "previsao": "23/06/2025",
-        "periodo_apuracao": "07/11/2023 - 15/03/2025",
-        "valor_vendas": "R$45552,00",
-        "valor_repasse": "R$88259,00"
-    },
-    {
-        "status": "Agendado",
-        "previsao": "21/09/2024",
-        "periodo_apuracao": "29/07/2024 - 10/12/2024",
-        "valor_vendas": "R$55724,00",
-        "valor_repasse": "R$72153,00"
-    },
-    {
-        "status": "Agendado",
-        "previsao": "25/11/2024",
-        "periodo_apuracao": "12/10/2023 - 17/09/2024",
-        "valor_vendas": "R$36118,00",
-        "valor_repasse": "R$52571,00"
-    },
-    {
         "status": "Pago",
         "previsao": "20/07/2024",
         "periodo_apuracao": "29/06/2024 - 11/08/2025",
         "valor_vendas": "R$82333,00",
         "valor_repasse": "R$34146,00"
-    },
-    {
-        "status": "Em aberto",
-        "previsao": "23/04/2024",
-        "periodo_apuracao": "29/12/2023 - 02/04/2025",
-        "valor_vendas": "R$80793,00",
-        "valor_repasse": "R$31982,00"
-    },
-    {
-        "status": "Agendado",
-        "previsao": "26/08/2025",
-        "periodo_apuracao": "11/10/2023 - 29/07/2025",
-        "valor_vendas": "R$11032,00",
-        "valor_repasse": "R$77451,00"
-    },
-    {
-        "status": "Agendado",
-        "previsao": "30/09/2024",
-        "periodo_apuracao": "26/03/2024 - 27/10/2024",
-        "valor_vendas": "R$69706,00",
-        "valor_repasse": "R$73661,00"
-    },
-    {
-        "status": "Agendado",
-        "previsao": "06/05/2024",
-        "periodo_apuracao": "01/11/2023 - 17/09/2024",
-        "valor_vendas": "R$76010,00",
-        "valor_repasse": "R$91380,00"
-    },
-    {
-        "status": "Agendado",
-        "previsao": "17/10/2024",
-        "periodo_apuracao": "06/03/2024 - 10/11/2024",
-        "valor_vendas": "R$94830,00",
-        "valor_repasse": "R$93508,00"
     },
     {
         "status": "Pago",
@@ -252,46 +112,11 @@
         "valor_repasse": "R$18196,00"
     },
     {
-        "status": "Em aberto",
-        "previsao": "28/01/2025",
-        "periodo_apuracao": "05/02/2024 - 10/10/2024",
-        "valor_vendas": "R$84485,00",
-        "valor_repasse": "R$60100,00"
-    },
-    {
         "status": "Pago",
         "previsao": "16/12/2023",
         "periodo_apuracao": "19/05/2024 - 17/09/2024",
         "valor_vendas": "R$83033,00",
         "valor_repasse": "R$62912,00"
-    },
-    {
-        "status": "Em aberto",
-        "previsao": "18/10/2024",
-        "periodo_apuracao": "09/02/2024 - 05/11/2024",
-        "valor_vendas": "R$58016,00",
-        "valor_repasse": "R$23934,00"
-    },
-    {
-        "status": "Em aberto",
-        "previsao": "20/09/2023",
-        "periodo_apuracao": "19/01/2024 - 17/04/2025",
-        "valor_vendas": "R$24143,00",
-        "valor_repasse": "R$86763,00"
-    },
-    {
-        "status": "Em aberto",
-        "previsao": "13/06/2024",
-        "periodo_apuracao": "08/12/2023 - 14/01/2025",
-        "valor_vendas": "R$10022,00",
-        "valor_repasse": "R$23897,00"
-    },
-    {
-        "status": "Em aberto",
-        "previsao": "29/08/2025",
-        "periodo_apuracao": "11/08/2024 - 06/02/2025",
-        "valor_vendas": "R$72358,00",
-        "valor_repasse": "R$37626,00"
     },
     {
         "status": "Agendado",
@@ -315,25 +140,11 @@
         "valor_repasse": "R$89722,00"
     },
     {
-        "status": "Em aberto",
-        "previsao": "19/05/2024",
-        "periodo_apuracao": "22/06/2024 - 08/04/2025",
-        "valor_vendas": "R$95841,00",
-        "valor_repasse": "R$27384,00"
-    },
-    {
         "status": "Pago",
         "previsao": "19/05/2025",
         "periodo_apuracao": "16/06/2024 - 29/05/2025",
         "valor_vendas": "R$14208,00",
         "valor_repasse": "R$47342,00"
-    },
-    {
-        "status": "Em aberto",
-        "previsao": "06/10/2023",
-        "periodo_apuracao": "24/11/2023 - 29/03/2025",
-        "valor_vendas": "R$29839,00",
-        "valor_repasse": "R$93324,00"
     },
     {
         "status": "Pago",

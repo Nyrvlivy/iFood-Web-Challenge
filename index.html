@@ -14,13 +14,27 @@
         <link rel="stylesheet" href="src/app/components/navbar/navbar.css" />
         <link rel="stylesheet" href="src/styles/main.css" />
         <link rel="stylesheet" href="src/styles/performance.css">
+        <link rel="stylesheet" href="src/styles/settlements.css">
     </head>
     <body>
         <div id="navbar-container"></div>
         <div id="content-wrapper">
             <div id="sidebar-container"></div>
             <div id="main-container">
-                <div id="app-content" class="container-fluid"></div>
+                <div id="app-content" class="container-fluid">
+                    <div id="page-content"></div>
+                    <div id="paymentTable"></div>
+                    <div id="settlementTable"></div>
+
+                </div>
+
+                <div class="d-flex justify-content-end p-5">
+                    <img width="150" src="src/assets/images/delivery-rabbit.svg" />
+                </div>
+
+                <div class="d-flex justify-content-center fw-bold color-gray fs-6 footer">
+                    <p>iFinances © 2024</p>
+                </div>
             </div>
         </div>
 
@@ -28,6 +42,7 @@
         <script src="src/app/components/sidebar/sidebar.js"></script>
         <script src="src/app/components/navbar/navbar.js"></script>
         <script src="src/app/router/router.js"></script>
+
         <script>
             loadSidebar().then(() => {
                 loadNavbar();
