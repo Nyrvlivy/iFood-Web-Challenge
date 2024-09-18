@@ -3,7 +3,7 @@
 </div>
 
 <h1 align="center">iFood Web Challenge</h1>
-<p align="center">Projeto de Desenvolvimento Backend: Construção de uma API RESTful em Java com Spring Boot para Gerenciamento de Transações Financeiras.</p>
+<p align="center">Projeto de Desenvolvimento Front-end: Aplicação Web de Backoffice com Bootstrap para gestão financeira.</p>
 
 <div align="center">
 
