@@ -1,4 +1,193 @@
-<div>
-    <h1 class="main-title-1">Saúde Operacional</h1>
-    <p class="main-subtitle-light-1">Conteúdo de Saúde Operacional</p>
+<div class="operation-health-container">
+    <header class="header">
+        <div class="header-top">
+            <h1 class="header-top-item main-title-1">
+                <span class="material-symbols-outlined">chevron_left</span>Saúde Operacional
+            </h1>
+
+            <div class="header-top-item export-container">
+                <div class="export-item date-selection-container">
+                    <div class="calendar-range">
+                        <div class="date-range">
+                            <input type="date" value="2024-06-09">
+                            <div class="separator"></div>
+                            <input type="date" value="2024-06-15">
+                        </div>
+                    </div>
+                </div>
+
+                <button class="export-item btn cancel-button d-flex gap-2">
+                    <span class="material-symbols-outlined">upload</span>
+                    Exportar
+                </button>
+            </div>
+        </div>
+
+        <div class="header-bottom">
+            <p class="main-subtitle-light-1">
+                Período <em>09/06/2024 - 15/06/2024</em>
+            </p>
+            <p class="content-graph-1">Avalie a Saúde do seu estabelecimento consultando e analisando dados de
+                cancelamentos, produtos melhor avaliados</p>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="analysis-container">
+            <div class="analysis-item overview-container">
+                <p class="main-subtitle-light-1">Overview</p>
+                <img class="overview-chart-image" alt="Indicadores gerais sobre a saúde operacional"
+                    src="src\assets\charts\operational-health-overview.svg" />
+            </div>
+
+            <div class="analysis-item order-problems-container">
+                <p class="main-subtitle-light-1">Problemas com Pedido</p>
+                <img class="order-problems-chart-image" alt="Gráfico sobre tipos de problemas com pedidos"
+                    src="src\assets\charts\order-problems-chart.svg" />
+            </div>
+
+            <div class="analysis-item ratings-container">
+                <p class="main-subtitle-light-1">Avaliações</p>
+                <img class="ratings-chart-image" alt="Indicadores gerais sobre avaliações de pedidos"
+                    src="src\assets\charts\ratings-chart.svg" />
+            </div>
+        </div>
+
+        <p class="main-subtitle-light-1">Cancelamentos</p>
+
+        <ul class="nav nav-underline report-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role>
+                <button class="nav-link active" id="problems-tab" data-bs-toggle="tab" data-bs-target="#problems"
+                    type="button" role="tab" aria-controls="problems" aria-selected="true">Histórico de
+                    Problemas</button>
+            </li>
+            <li class="nav-item">
+                <button class="nav-link" id="worst-products-tab" data-bs-toggle="tab" data-bs-target="#worst-products"
+                    type="button" role="tab" aria-controls="worst-products" aria-selected="false">Produtos Pior
+                    Avaliados</button>
+            </li>
+            <li class="nav-item">
+                <button class="nav-link" id="best-products-tab" data-bs-toggle="tab" data-bs-target="#best-products"
+                    type="button" role="tab" aria-controls="best-products" aria-selected="false">Produtos Melhor
+                    Avaliados</button>
+            </li>
+        </ul>
+
+        <div class="tab-content">
+
+            <div class="tab-pane active" id="problems" role="tabpanel" aria-labelledby="problems-tab" tabindex="0">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">Data</th>
+                                <th scope="col">Descrição</th>
+                                <th scope="col">Motivo</th>
+                                <th scope="col">Total</th>
+                                <th scope="col">Reembolso</th>
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>88561</td>
+                                <td>28 Jan, 2024 - 12:30 AM</td>
+                                <td>Lasanha de Camarão com Queijo</td>
+                                <td>Atraso no preparo</td>
+                                <td>R$ 25,52</td>
+                                <td class="problems-refund">-R$ 25,52</td>
+                                <td>
+                                    <span class="material-symbols-outlined">
+                                        visibility
+                                    </span>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>88462</td>
+                                <td>25 Jan, 2024 - 10:40 PM</td>
+                                <td>Risotto</td>
+                                <td>Atraso no preparo</td>
+                                <td>R$ 53,99</td>
+                                <td class="problems-refund">-R$ 53,99</td>
+                                <td>
+                                    <span class="material-symbols-outlined">
+                                        visibility
+                                    </span>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>87990</td>
+                                <td>20 Jan, 2024 - 10:40 PM</td>
+                                <td>Mix Saudável</td>
+                                <td>Problemas com qualidade do produto</td>
+                                <td>R$ 102,20</td>
+                                <td class="problems-refund">-R$ 102,20</td>
+                                <td>
+                                    <span class="material-symbols-outlined">
+                                        visibility
+                                    </span>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>87901</td>
+                                <td>15 Jan, 2024 - 03:29 PM</td>
+                                <td>Parmegiana de Frango + Coca</td>
+                                <td>Atraso na entrega</td>
+                                <td>R$ 12,50</td>
+                                <td class="problems-refund">-R$ 12,50</td>
+                                <td>
+                                    <span class="material-symbols-outlined">
+                                        visibility
+                                    </span>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>87889</td>
+                                <td>14 Jan, 2024 - 10:40 PM</td>
+                                <td>Poke</td>
+                                <td>Cancelado pela loja</td>
+                                <td>R$ 62,80</td>
+                                <td class="problems-refund">-R$ 62,80</td>
+                                <td>
+                                    <span class="material-symbols-outlined">
+                                        visibility
+                                    </span>
+                                </td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="tab-pane" id="worst-products" role="tabpanel" aria-labelledby="worst-products-tab" tabindex="0">
+                Aba de Piores Produtos
+            </div>
+
+            <div class="tab-pane" id="best-products" role="tabpanel" aria-labelledby="best-products-tab" tabindex="0">
+                Aba de Melhores Produtos
+            </div>
+        </div>
+
+
+        <div id="health-report-footer-container">
+            <div class="health-report-nav py-0 d-flex">
+                <p><strong>Exibindo 1-5 de 15</strong></p>
+                <div class="btn-group btn-group-sm">
+                    <button type="button" class="btn btn-outline-secondary">
+                        <span class="material-symbols-outlined">chevron_left</span>
+                    </button>
+                    <button type="button" class="btn btn-outline-dark">
+                        <span class="material-symbols-outlined">chevron_right</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </main>
 </div>
