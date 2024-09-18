@@ -223,6 +223,8 @@
     border-color: var(--primary-green) !important;
 }
 
+.border-
+
 .cursor-pointer {
     cursor: pointer;
 }
@@ -264,4 +266,47 @@
 
 .table-header {
     border-bottom: 1px solid var(--background-light-gray);
+}
+
+.rounded-top-left {
+    border-top-left-radius: .5rem;
+}
+
+.rounded-top-right {
+    border-top-right-radius: .5rem;
+}
+
+.rounded-bottom-left {
+    border-bottom-left-radius: .5rem;
+}
+
+.rounded-bottom-right {
+    border-bottom-right-radius: .5rem;
+}
+
+.date-range-alt {
+    border-radius: 5px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.separator-alt {
+    width: 22px;
+    height: 2px;
+    background: #929292;
+    margin: 0 10px;
+}
+
+input[type="date"].date-alt,
+select,
+input[type="number"] {
+    border: none;
+    font-size: 16px;
+    color: #929292;
+    width: 100%;
+    background: transparent;
+    align-items: center;
 }

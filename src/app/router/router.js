@@ -20,6 +20,8 @@ const TOTAL_PAGES = {
 const TABLE_BY_ROUTE = {
     dashboard: [TABLE_NAMES.SETTLEMENTS, "src/app/components/tables/settlements.html"],
     "settlement-entries": [TABLE_NAMES.ENTRIES, "src/app/components/tables/settlementEntries.html"],
+    entries: [TABLE_NAMES.ENTRIES, "src/app/components/tables/settlementEntries.html"],
+    "settlements-period": [TABLE_NAMES.SETTLEMENTS, "src/app/components/tables/settlements.html"],
 };
 
 /**
@@ -68,6 +70,12 @@ const ROUTE_MAP = {
 
     "goals-and-projections": "metas-e-projecoes",
     "metas-e-projecoes": "goals-and-projections",
+
+    "add-entry": "adicionar-lancamento",
+    "adicionar-lancamento": "add-entry",
+
+    "settlements-period": "repasses-periodo",
+    "repasses-periodo": "settlements-period",
 };
 
 const makeSettlementsTableRow = (entry) => `
@@ -98,48 +106,46 @@ const makeSettlementsTableRow = (entry) => `
 `;
 
 const makeSettlementEntriesTableRow = (entry) => `
-<a href="#/lancamentos-repasse-" class="text-decoration-none text-reset">
-    <div class="row bg-white table-entry">
-        <div class="col p-0">
-            <div class="border-start border-5 p-3 ${entry.borderColor}">
-                <p class="fw-bold ${entry.textColor} mb-0">${entry.data}</p>
-            </div>
-        </div>
-        <div class="col border-start d-flex align-items-center">
-            <p class="fw-bold mb-0">${entry.pedido}</p>
-        </div>
-        <div class="col border-start d-flex align-items-center">
-            <img src="src/assets/icons/ifood-red-logo-mini.svg" />
-        </div>
-        <div class="col border-start d-flex align-items-center">
-            <p class="fw-bold mb-0">${entry.valor_pedido}</p>
-        </div>
-        <div class="col border-start d-flex align-items-center">
-            <p class="fw-bold mb-0">${entry.frete}</p>
-        </div>
-        <div class="col border-start d-flex align-items-center">
-            <p class="fw-bold mb-0">${entry.tx_servico}</p>
-        </div>
-        <div class="col border-start d-flex align-items-center">
-            <p class="fw-bold mb-0">${entry.incentivo_promo}</p>
-        </div>
-        <div class="col border-start d-flex align-items-center">
-            <p class="fw-bold mb-0">${entry.base_calculo}</p>
-        </div>
-        <div class="col border-start d-flex align-items-center">
-            <p class="fw-bold mb-0">${entry.comissao_ifood}</p>
-        </div>
-        <div class="col border-start d-flex align-items-center">
-            <p class="fw-bold mb-0">${entry.tx_transacao}</p>
-        </div>
-        <div class="col border-start d-flex align-items-center">
-            <p class="fw-bold mb-0">${entry.outros_lanc}</p>
-        </div>
-        <div class="col border-start d-flex align-items-center">
-            <p class="fw-bold mb-0">${entry.valor_liquido}</p>
+<div class="d-flex p-0 bg-white table-entry">
+    <div class="col p-0">
+        <div class="border-start border-5 p-3 ${entry.borderColor}">
+            <p class="fw-bold ${entry.textColor} mb-0">${entry.data}</p>
         </div>
     </div>
-</a>
+    <div class="col border-start d-flex align-items-center">
+        <p class="fw-bold mb-0">${entry.pedido}</p>
+    </div>
+    <div class="col border-start d-flex align-items-center">
+        <img src="src/assets/icons/ifood-red-logo-mini.svg" />
+    </div>
+    <div class="col border-start d-flex align-items-center">
+        <p class="fw-bold mb-0">${entry.valor_pedido}</p>
+    </div>
+    <div class="col border-start d-flex align-items-center">
+        <p class="fw-bold mb-0">${entry.frete}</p>
+    </div>
+    <div class="col border-start d-flex align-items-center">
+        <p class="fw-bold mb-0">${entry.tx_servico}</p>
+    </div>
+    <div class="col border-start d-flex align-items-center">
+        <p class="fw-bold mb-0">${entry.incentivo_promo}</p>
+    </div>
+    <div class="col border-start d-flex align-items-center">
+        <p class="fw-bold mb-0">${entry.base_calculo}</p>
+    </div>
+    <div class="col border-start d-flex align-items-center">
+        <p class="fw-bold mb-0">${entry.comissao_ifood}</p>
+    </div>
+    <div class="col border-start d-flex align-items-center">
+        <p class="fw-bold mb-0">${entry.tx_transacao}</p>
+    </div>
+    <div class="col border-start d-flex align-items-center">
+        <p class="fw-bold mb-0">${entry.outros_lanc}</p>
+    </div>
+    <div class="col border-start d-flex align-items-center">
+        <p class="fw-bold mb-0">${entry.valor_liquido}</p>
+    </div>
+</div>
 `;
 
 function maybeHideTable() {
@@ -337,7 +343,7 @@ async function getPageTable(tableName, tablePath) {
  * @returns {Promise<void>}
  */
 async function navigateTo(route) {
-    const translatedRoute = ROUTE_MAP[route];
+    const translatedRoute = ROUTE_MAP[route] || ROUTE_MAP.dashboard;
     await hidratePage(translatedRoute);
 
     const result = TABLE_BY_ROUTE[translatedRoute];
