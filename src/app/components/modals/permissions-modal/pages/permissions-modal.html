@@ -1,0 +1,62 @@
+<div class="container-ext">
+    <div class="container">
+        <div class="sub-header">
+            <div class="sub-sub-header">
+                <ul class="nav nav-underline">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/src/app/components/modals/permissions-modal/pages/permissions-modal.html">Novo Usuário</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/src/app/components/modals/permissions-modal/pages/settings-user-modal.html">Contas</a>
+                    </li>
+                </ul>
+                <!-- 
+        <div class="button-new-user"><a href="">Novo Usuário</a></div>
+        <div class="button-accounts"><a href="">Contas</a></div>
+        -->
+            </div>
+        </div>
+
+        <div class="header">
+            <div class="header-int">
+                <div class="title-permissions">Permissões</div>
+                <div class="close-permissions"><a href="">X</a></div>
+            </div>
+        </div>
+
+        <div class="main-permissions">
+            <div class="profile">Perfil</div>
+            <div class="enclousure-photo">
+                <div class="photo-profile-title">Foto de Perfil</div>
+                <div class="photo-profile"><img src="./assets/avatar-profile.svg" alt="foto de perfil de usuário" /></div>
+            </div>
+
+            <form class="form">
+                <label class="label" for="nome">Nome</label>
+                <input class="input" type="text" id="nome" name="nome" required maxlength="50" placeholder="Ex: João Miguel dos Santos" />
+
+                <label class="label" for="email">E-mail</label>
+                <input class="input" type="email" id="email" name="email" required placeholder="Ex: joaomiguel@elliespub.com.br" />
+
+                <label class="label" for="cpf">CPF</label>
+                <input class="input" type="number" id="cpf" name="cpf" required minlength="9" placeholder="Ex: 000.000.000-00" />
+            </form>
+        </div>
+
+        <div class="aside-permissions">
+            <div class="settings">Configurações</div>
+            <form class="form">
+                <label class="label" for="permission">Nível de Permissão</label>
+                <input class="input-permission" type="text" id="permission" placeholder="Administrador" />
+                <label class="token" for="token">Gerar TOKEN de acesso</label>
+
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked />
+                    <label class="form-check-label" for="flexSwitchCheckChecked">Permitir autenticação por TOKEN de acesso</label>
+                </div>
+            </form>
+
+            <div class="button-create"><a href="">Criar</a></div>
+        </div>
+    </div>
+</div>
