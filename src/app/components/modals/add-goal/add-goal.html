@@ -1,0 +1,44 @@
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#metaModal">Criar Meta</button>
+
+<div class="modal fade" id="metaModal" tabindex="-1" aria-labelledby="metaModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="metaModalLabel">Criar Meta</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="metaForm">
+                    <div class="mb-3">
+                        <label for="periodo" class="form-label">Período</label>
+                        <div class="d-flex">
+                            <input type="date" class="form-control me-2" id="dataInicio" name="dataInicio" required />
+                            <input type="date" class="form-control" id="dataFim" name="dataFim" required />
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="tipoLancamento" class="form-label">Tipo de Lançamento</label>
+                        <select class="form-select" id="tipoLancamento" name="tipoLancamento" required>
+                            <option value="">Selecione...</option>
+                            <option value="diario">Diário</option>
+                            <option value="semanal">Semanal</option>
+                            <option value="mensal">Mensal</option>
+                            <option value="anual">Anual</option>
+                            <option value="manual">Manual</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="valorMeta" class="form-label">Valor da Meta</label>
+                        <input type="number" class="form-control" id="valorMeta" name="valorMeta" placeholder="R$" required />
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="submit" class="btn btn-primary">Salvar Meta</button>
+            </div>
+        </div>
+    </div>
+</div>
