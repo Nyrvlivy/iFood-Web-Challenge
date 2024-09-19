@@ -81,21 +81,20 @@
                     <span class="profile-item-text">Contas</span>
                     <span class="material-symbols-outlined profile-arrow">keyboard_arrow_right</span>
                 </div>
-                <div class="profile-item">
-                    <span class="material-symbols-outlined profile-icon">manage_accounts</span>
-                    <span class="profile-item-text">Permissões</span>
-                    <span class="material-symbols-outlined profile-arrow">keyboard_arrow_right</span>
-                </div>
-                <div class="profile-item">
-                    <span class="material-symbols-outlined profile-icon">notifications</span>
-                    <span class="profile-item-text">Notificações</span>
-                    <span class="material-symbols-outlined profile-arrow">keyboard_arrow_right</span>
-                </div>
-                <div class="profile-item">
-                    <span class="material-symbols-outlined profile-icon">info</span>
-                    <span class="profile-item-text">Sobre</span>
-                    <span class="material-symbols-outlined profile-arrow">keyboard_arrow_right</span>
-                </div>
+                <a class="text-reset text-decoration-none" data-bs-toggle="modal" data-bs-target="#permissionsModal">
+                    <div class="profile-item">
+                        <span class="material-symbols-outlined profile-icon">manage_accounts</span>
+                        <span class="profile-item-text">Permissões</span>
+                        <span class="material-symbols-outlined profile-arrow">keyboard_arrow_right</span>
+                    </div>
+                </a>
+                <a class="text-reset text-decoration-none" data-bs-toggle="modal" data-bs-target="#aboutModal">
+                    <div class="profile-item">
+                        <span class="material-symbols-outlined profile-icon">info</span>
+                        <span class="profile-item-text">Sobre</span>
+                        <span class="material-symbols-outlined profile-arrow">keyboard_arrow_right</span>
+                    </div>
+                </a>
             </div>
             <div class="profile-user">
                 <a href="#" data-bs-toggle="modal" data-bs-target="#user-modal" class="profile-link">
@@ -118,6 +117,5 @@
         <span class="material-symbols-outlined">chevron_right</span>
     </div>
 </div>
-<div id="notification-container" class="position-fixed top-0 end-0 p-3" style="z-index: 1100;"></div>
 
-</div>
+<div id="notification-container" class="position-fixed top-0 end-0 p-3" style="z-index: 1100;"></div>
