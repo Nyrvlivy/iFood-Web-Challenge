@@ -1,4 +1,274 @@
-<div>
-    <h1 class="main-title-1">Metas e Projeções</h1>
-    <p class="main-subtitle-light-1">Conteúdo de Metas e Projeções</p>
+<div class="d-flex justify-content-between">
+    <a href="#/dashboard" class="d-flex align-items-center text-reset text-decoration-none mb-4">
+        <span class="material-symbols-outlined fs-1">chevron_left</span>
+        <h1 class="main-title-1 mb-0">Metas</h1>
+    </a>
+    <div class="d-flex gap-3">
+        <div>
+            <button type="button" class="btn d-flex align-items-center gap-2 btn-danger align-items-center" onclick="downloadIssueHistory()">
+                <span class="material-symbols-outlined">target</span>
+                <p class="mb-0">Criar meta</p>
+            </button>
+        </div>
+        <div>
+            <button type="button" class="btn btn-danger align-items-center" onclick="downloadIssueHistory()">
+                <svg width="16" height="17" viewBox="0 0 16 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.00006 22C1.45006 22 0.979228 21.8042 0.587561 21.4125C0.195894 21.0208 6.10352e-05 20.55 6.10352e-05 20V9C6.10352e-05 8.45 0.195894 7.97917 0.587561 7.5875C0.979228 7.19583 1.45006 7 2.00006 7H5.00006V9H2.00006V20H14.0001V9H11.0001V7H14.0001C14.5501 7 15.0209 7.19583 15.4126 7.5875C15.8042 7.97917 16.0001 8.45 16.0001 9V20C16.0001 20.55 15.8042 21.0208 15.4126 21.4125C15.0209 21.8042 14.5501 22 14.0001 22H2.00006ZM7.00006 15V3.825L5.40006 5.425L4.00006 4L8.00006 0L12.0001 4L10.6001 5.425L9.00006 3.825V15H7.00006Z" fill="white" />
+                </svg>
+                &nbsp; Exportar
+            </button>
+        </div>
+    </div>
+</div>
+
+<p class="main-subtitle-light-1">Período<span class="color-red">09/06/2024 - 15/06/2024</span></p>
+
+<div class="row">
+    <div class="col-12 col-sm-6 col-md-6 col-lg-8">
+        <div class="row">
+            <div class="col-12 col-sm-6">
+                <p class="color-gray fs-5 fw-bold mb-2">Previsão de Vendas Futura</p>
+                <p class="color-gray mb-2">Comparação entre vendas reais e vendas previstas ao longo do tempo.</p>
+                <div class="bg-white rounded p-3">
+                    <img class="w-100" src="src/assets/charts/future-sales-forecast-chart.svg" alt="" />
+                </div>
+            </div>
+            <div class="col-12 col-sm-6">
+                <p class="color-gray fs-5 fw-bold mb-2">Análise de Tendências de Vendas</p>
+                <p class="color-gray mb-2">Comparação entre as vendas de diferentes meses em anos consecutivos.</p>
+                <div class="bg-white rounded p-3">
+                    <img class="w-100" src="src/assets/charts/sales-trend-analysis-chart.svg" alt="" />
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 p-4 rounded-3 mt-5 d-flex bg-red-grad justify-content-center align-items-center text-white">
+                <p class="fs-5 fw-bold text-center text-white m-0">Atenção: As previsões de vendas são estimativas baseadas em dados históricos. Fatores externos podem afetar a precisão. Use essas previsões como orientação e ajuste conforme necessário.</p>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="row">
+                <p class="fs-3 fw-bold mb-2">Metas</p>
+            </div>
+            <div class="col-6 col-sm-6 col-md-3">
+                <p class="color-gray fs-5 mb-2">Meta diária</p>
+                <div class="bg-white rounded p-3">
+                    <img class="w-100" src="src/assets/charts/daily-goal.png" alt="" />
+                </div>
+            </div>
+
+            <div class="col-6 col-sm-6 col-md-3">
+                <p class="color-gray fs-5 mb-2">Meta semanal</p>
+                <div class="bg-white rounded p-3">
+                    <img class="w-100" src="src/assets/charts/weekly-goal.png" alt="" />
+                </div>
+            </div>
+
+            <div class="col-6 col-sm-6 col-md-3">
+                <p class="color-gray fs-5 mb-2">Meta mensal</p>
+                <div class="bg-white rounded p-3">
+                    <img class="w-100" src="src/assets/charts/monthly-goal.png" alt="" />
+                </div>
+            </div>
+
+            <div class="col-6 col-sm-6 col-md-3">
+                <p class="color-gray fs-5 mb-2">Meta anual</p>
+                <div class="bg-white rounded p-3">
+                    <img class="w-100" src="src/assets/charts/annual-goal.png" alt="" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-md-6 col-lg-4">
+        <p class="fs-5 color-gray fw-bold mb-2">Histórico de Metas</p>
+        <p class="color-gray mb-2 fs-6">Verifique como anda o desenvolvimento das metas.</p>
+        <div class="bg-white p-3 rounded">
+            <p class="fw-bold color-gray mb-3 fs-5">Últimas Metas</p>
+
+            <div class="bg-white px-2">
+                <div class="row rounded-top bg-gray border-bottom pb-2 border-color-subtitle py-3">
+                    <div class="col-3"></div>
+                    <div class="col-3">
+                        <p class="color-gray mb-0">Faturado</p>
+                    </div>
+                    <div class="col-3">
+                        <p class="color-gray mb-0">Metas</p>
+                    </div>
+                    <div class="col-3">
+                        <p class="color-gray mb-0">Pedidos</p>
+                    </div>
+                </div>
+
+                <div class="row bg-gray rounded-bottom align-items-center mb-3 py-3">
+                    <div class="col-3">
+                        <p class="fw-bold fs-6 mb-0">Diário</p>
+                    </div>
+                    <div class="col-3">
+                        <p class="color-red fw-bold mb-0">R$2032,44</p>
+                    </div>
+                    <div class="col-3">
+                        <p class="mb-0">64%</p>
+                    </div>
+                    <div class="col-3">
+                        <p class="mb-0">252</p>
+                    </div>
+                </div>
+
+                <div class="row bg-gray rounded py-3 align-items-center mb-3">
+                    <div class="col-3">
+                        <p class="fw-bold fs-6 mb-0">Semanal</p>
+                    </div>
+                    <div class="col-3">
+                        <p class="color-yellow fw-bold mb-0">R$22K</p>
+                    </div>
+                    <div class="col-3">
+                        <p class="mb-0">84%</p>
+                    </div>
+                    <div class="col-3">
+                        <p class="mb-0">2K</p>
+                    </div>
+                </div>
+
+                <div class="row bg-gray rounded py-3 align-items-center mb-3">
+                    <div class="col-3">
+                        <p class="fw-bold fs-6 mb-0">Mensal</p>
+                    </div>
+                    <div class="col-3">
+                        <p class="color-yellow fw-bold mb-0">R$56K</p>
+                    </div>
+                    <div class="col-3">
+                        <p class="mb-0">57%</p>
+                    </div>
+                    <div class="col-3">
+                        <p class="mb-0">8K</p>
+                    </div>
+                </div>
+
+                <div class="row bg-gray rounded py-3 align-items-center mb-3">
+                    <div class="col-3">
+                        <p class="fw-bold fs-6 mb-0">Anual</p>
+                    </div>
+                    <div class="col-3">
+                        <p class="color-green fw-bold mb-0">R$560K</p>
+                    </div>
+                    <div class="col-3">
+                        <p class="mb-0">107%</p>
+                    </div>
+                    <div class="col-3">
+                        <p class="mb-0">90K</p>
+                    </div>
+                </div>
+
+                <p class="fw-bold color-gray mb-3 mt-3 fs-5">Recorde de Metas Mensais</p>
+
+                <div class="bg-white px-2">
+                    <div class="row rounded-top bg-gray border-bottom pb-2 border-color-subtitle py-3">
+                        <div class="col-3"></div>
+                        <div class="col-3">
+                            <p class="color-gray mb-0">Faturado</p>
+                        </div>
+                        <div class="col-3">
+                            <p class="color-gray mb-0">Metas</p>
+                        </div>
+                        <div class="col-3">
+                            <p class="color-gray mb-0">Pedidos</p>
+                        </div>
+                    </div>
+
+                    <div class="row bg-gray rounded-bottom align-items-center mb-3 py-3">
+                        <div class="col-3">
+                            <p class="fw-bold fs-6 mb-0">Junho</p>
+                        </div>
+                        <div class="col-3">
+                            <p class="color-green fw-bold mb-0">R$82K</p>
+                        </div>
+                        <div class="col-3">
+                            <p class="mb-0">132%</p>
+                        </div>
+                        <div class="col-3">
+                            <p class="mb-0">12.232</p>
+                        </div>
+                    </div>
+
+                    <div class="row bg-gray rounded py-3 align-items-center mb-3">
+                        <div class="col-3">
+                            <p class="fw-bold fs-6 mb-0">Maio</p>
+                        </div>
+                        <div class="col-3">
+                            <p class="color-green fw-bold mb-0">R$81K</p>
+                        </div>
+                        <div class="col-3">
+                            <p class="mb-0">131%</p>
+                        </div>
+                        <div class="col-3">
+                            <p class="mb-0">11.892</p>
+                        </div>
+                    </div>
+
+                    <div class="row bg-gray rounded py-3 align-items-center mb-3">
+                        <div class="col-3">
+                            <p class="fw-bold fs-6 mb-0">Abril</p>
+                        </div>
+                        <div class="col-3">
+                            <p class="color-green fw-bold mb-0">R$61K</p>
+                        </div>
+                        <div class="col-3">
+                            <p class="mb-0">111%</p>
+                        </div>
+                        <div class="col-3">
+                            <p class="mb-0">7.123</p>
+                        </div>
+                    </div>
+
+                    <div class="row bg-gray rounded py-3 align-items-center mb-3">
+                        <div class="col-3">
+                            <p class="fw-bold fs-6 mb-0">Março</p>
+                        </div>
+                        <div class="col-3">
+                            <p class="color-green fw-bold mb-0">R$71K</p>
+                        </div>
+                        <div class="col-3">
+                            <p class="mb-0">120%</p>
+                        </div>
+                        <div class="col-3">
+                            <p class="mb-0">8.527</p>
+                        </div>
+                    </div>
+
+                    <div class="row bg-gray rounded py-3 align-items-center mb-3">
+                        <div class="col-3">
+                            <p class="fw-bold fs-6 mb-0">Fevereiro</p>
+                        </div>
+                        <div class="col-3">
+                            <p class="color-green fw-bold mb-0">R$73K</p>
+                        </div>
+                        <div class="col-3">
+                            <p class="mb-0">122%</p>
+                        </div>
+                        <div class="col-3">
+                            <p class="mb-0">8.872</p>
+                        </div>
+                    </div>
+
+                    <div class="row bg-gray rounded py-3 align-items-center mb-3">
+                        <div class="col-3">
+                            <p class="fw-bold fs-6 mb-0">Janeiro</p>
+                        </div>
+                        <div class="col-3">
+                            <p class="color-green fw-bold mb-0">R$76K</p>
+                        </div>
+                        <div class="col-3">
+                            <p class="mb-0">125%</p>
+                        </div>
+                        <div class="col-3">
+                            <p class="mb-0">9.385</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

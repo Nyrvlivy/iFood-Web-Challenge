@@ -171,6 +171,14 @@
     background: var(--primary-green-gradient);
 }
 
+.border-color-subtitle {
+    border-color: var(--subtitle-color-light) !important;
+}
+
+.bg-gray {
+    background: var(--background-light-gray);
+}
+
 .bg-subtitle {
     background: var(--subtitle-color-light);
 }
@@ -223,9 +231,7 @@
     border-color: var(--primary-green) !important;
 }
 
-.border-
-
-.cursor-pointer {
+.border- .cursor-pointer {
     cursor: pointer;
 }
 
@@ -253,8 +259,8 @@
         display: flex;
         flex-wrap: wrap;
         margin-top: calc(-1 * var(--bs-gutter-y));
-        margin-right: calc(-.5 * var(--bs-gutter-x));
-        margin-left: calc(-.5 * var(--bs-gutter-x))
+        margin-right: calc(-0.5 * var(--bs-gutter-x));
+        margin-left: calc(-0.5 * var(--bs-gutter-x));
     }
 }
 
@@ -269,19 +275,19 @@
 }
 
 .rounded-top-left {
-    border-top-left-radius: .5rem;
+    border-top-left-radius: 0.5rem;
 }
 
 .rounded-top-right {
-    border-top-right-radius: .5rem;
+    border-top-right-radius: 0.5rem;
 }
 
 .rounded-bottom-left {
-    border-bottom-left-radius: .5rem;
+    border-bottom-left-radius: 0.5rem;
 }
 
 .rounded-bottom-right {
-    border-bottom-right-radius: .5rem;
+    border-bottom-right-radius: 0.5rem;
 }
 
 .date-range-alt {
