@@ -109,6 +109,7 @@ Resumo das principais páginas e funcionalidades da aplicação:
 <div align="center">
   <img alt="" src=".github/assets/images/pages/dashboard.png">
   <br>
+  <img alt="" src=".github/assets/images/pages/dashboard-2.png">
 </div>
 
 ### Repasses
@@ -117,6 +118,7 @@ Resumo das principais páginas e funcionalidades da aplicação:
 <div align="center">
   <img alt="" src=".github/assets/images/pages/repasses.png">
   <br>
+  <img alt="" src=".github/assets/images/pages/repasses-2.png">
 </div>
 
 ### Repasses por Período
@@ -149,6 +151,7 @@ Resumo das principais páginas e funcionalidades da aplicação:
 <div align="center">
   <img alt="" src=".github/assets/images/pages/desempenho.png">
   <br>
+  <img alt="" src=".github/assets/images/pages/desempenho-2.png">
 </div>
 
 ### Saúde Operacional
